@@ -1,0 +1,1386 @@
+[
+    {
+        "siswa_id": "1",
+        "va_creation_date": "2024-07-29 11:23:39",
+        "va_expiry_date": "2025-06-30 18:00:34",
+        "status": "Active",
+        "billing_amount": "3600000",
+        "description": "pembayaran spp th 2425 kelas sd 1.14"
+    },
+    {
+        "siswa_id": "2",
+        "va_creation_date": "2024-07-29 11:22:06",
+        "va_expiry_date": "2025-06-30 18:00:14",
+        "status": "Active",
+        "billing_amount": "3600000",
+        "description": "pembayaran spp th 2425 kelas sd 1.13"
+    },
+    {
+        "siswa_id": "3",
+        "va_creation_date": "2024-07-29 11:20:44",
+        "va_expiry_date": "2025-06-30 18:00:42",
+        "status": "Active",
+        "billing_amount": "3600000",
+        "description": "pembayaran spp th 2425 kelas sd 1.12"
+    },
+    {
+        "siswa_id": "4",
+        "va_creation_date": "2024-07-29 10:57:13",
+        "va_expiry_date": "2025-06-30 18:00:09",
+        "status": "Active",
+        "billing_amount": "4200000",
+        "description": "pembayaran spp th 2425 kelas sd 1.11"
+    },
+    {
+        "siswa_id": "5",
+        "va_creation_date": "2024-07-29 10:55:54",
+        "va_expiry_date": "2025-06-30 18:00:46",
+        "status": "Active",
+        "billing_amount": "2400000",
+        "description": "pembayaran spp th 2425 kelas sd 1.10"
+    },
+    {
+        "siswa_id": "6",
+        "va_creation_date": "2024-07-29 10:54:29",
+        "va_expiry_date": "2025-06-30 18:00:24",
+        "status": "Active",
+        "billing_amount": "3400000",
+        "description": "pembayaran spp th 2425 kelas sd 6.9 mutasi 1 juta"
+    },
+    {
+        "siswa_id": "7",
+        "va_creation_date": "2024-07-29 10:52:18",
+        "va_expiry_date": "2025-06-30 18:00:03",
+        "status": "Active",
+        "billing_amount": "2400000",
+        "description": "pembayaran spp th 2425 kelas sd 1.8"
+    },
+    {
+        "siswa_id": "8",
+        "va_creation_date": "2024-07-29 10:50:47",
+        "va_expiry_date": "2025-06-30 18:00:51",
+        "status": "Active",
+        "billing_amount": "2400000",
+        "description": "pembayaran spp th 2425 kelas sd 1.7"
+    },
+    {
+        "siswa_id": "9",
+        "va_creation_date": "2024-07-26 12:31:22",
+        "va_expiry_date": "2025-06-30 18:00:58",
+        "status": "Active",
+        "billing_amount": "6400000",
+        "description": "pembayaran spp th 2425 kelas xi mutasi"
+    },
+    {
+        "siswa_id": "10",
+        "va_creation_date": "2024-07-22 13:01:52",
+        "va_expiry_date": "2025-06-30 18:00:50",
+        "status": "Active",
+        "billing_amount": "5400000",
+        "description": "pembayaran spp th 2425 sma x.27"
+    },
+    {
+        "siswa_id": "11",
+        "va_creation_date": "2024-07-22 12:59:36",
+        "va_expiry_date": "2025-06-30 18:00:00",
+        "status": "Active",
+        "billing_amount": "4200000",
+        "description": "pembayaran spp th 2425 sma x.26"
+    },
+    {
+        "siswa_id": "12",
+        "va_creation_date": "2024-07-22 12:57:19",
+        "va_expiry_date": "2025-06-30 18:00:32",
+        "status": "Active",
+        "billing_amount": "5400000",
+        "description": "pembayaran spp th 2425 sma x.25"
+    },
+    {
+        "siswa_id": "13",
+        "va_creation_date": "2024-07-22 11:26:01",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4860000",
+        "description": "pembayaran spp th 24 25 sma x.24"
+    },
+    {
+        "siswa_id": "14",
+        "va_creation_date": "2024-07-22 11:26:01",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5400000",
+        "description": "pembayaran spp th 24 25 sma x.23"
+    },
+    {
+        "siswa_id": "15",
+        "va_creation_date": "2024-07-22 11:26:01",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4860000",
+        "description": "pembayaran spp th 24 25 sma x.22"
+    },
+    {
+        "siswa_id": "16",
+        "va_creation_date": "2024-07-22 11:26:01",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4860000",
+        "description": "pembayaran spp th 24 25 sma x.21"
+    },
+    {
+        "siswa_id": "17",
+        "va_creation_date": "2024-07-22 11:26:01",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4860000",
+        "description": "pembayaran spp th 24 25 sma x.20"
+    },
+    {
+        "siswa_id": "18",
+        "va_creation_date": "2024-07-22 11:26:01",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5400000",
+        "description": "pembayaran spp th 24 25 sma x.19"
+    },
+    {
+        "siswa_id": "19",
+        "va_creation_date": "2024-07-22 11:26:01",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5400000",
+        "description": "pembayaran spp th 24 25 sma x.18"
+    },
+    {
+        "siswa_id": "20",
+        "va_creation_date": "2024-07-22 11:26:00",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5400000",
+        "description": "pembayaran spp th 24 25 sma x.17"
+    },
+    {
+        "siswa_id": "21",
+        "va_creation_date": "2024-07-22 11:26:00",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5400000",
+        "description": "pembayaran spp th 24 25 sma x.16"
+    },
+    {
+        "siswa_id": "22",
+        "va_creation_date": "2024-07-22 11:26:00",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5400000",
+        "description": "pembayaran spp th 24 25 sma x.15"
+    },
+    {
+        "siswa_id": "23",
+        "va_creation_date": "2024-07-22 11:26:00",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5400000",
+        "description": "pembayaran spp th 24 25 sma x.14"
+    },
+    {
+        "siswa_id": "24",
+        "va_creation_date": "2024-07-22 11:26:00",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4320000",
+        "description": "pembayaran spp th 24 25 sma x.13"
+    },
+    {
+        "siswa_id": "25",
+        "va_creation_date": "2024-07-22 11:26:00",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4320000",
+        "description": "pembayaran spp th 24 25 sma x.12"
+    },
+    {
+        "siswa_id": "26",
+        "va_creation_date": "2024-07-22 11:26:00",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4320000",
+        "description": "pembayaran spp th 24 25 sma x.11"
+    },
+    {
+        "siswa_id": "27",
+        "va_creation_date": "2024-07-22 11:26:00",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5400000",
+        "description": "pembayaran spp th 24 25 sma x.10"
+    },
+    {
+        "siswa_id": "28",
+        "va_creation_date": "2024-07-22 11:26:00",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4860000",
+        "description": "pembayaran spp th 24 25 sma x.9"
+    },
+    {
+        "siswa_id": "29",
+        "va_creation_date": "2024-07-22 11:26:00",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5400000",
+        "description": "pembayaran spp th 24 25 sma x.8"
+    },
+    {
+        "siswa_id": "30",
+        "va_creation_date": "2024-07-22 11:26:00",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5400000",
+        "description": "pembayaran spp th 24 25 sma x.7"
+    },
+    {
+        "siswa_id": "31",
+        "va_creation_date": "2024-07-22 11:26:00",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5400000",
+        "description": "pembayaran spp th 24 25 sma x.6"
+    },
+    {
+        "siswa_id": "32",
+        "va_creation_date": "2024-07-22 9:15:00",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5400000",
+        "description": "pembayaran spp th 24 25 sma x.5"
+    },
+    {
+        "siswa_id": "33",
+        "va_creation_date": "2024-07-22 9:15:00",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5400000",
+        "description": "pembayaran spp th 24 25 sma x.4"
+    },
+    {
+        "siswa_id": "34",
+        "va_creation_date": "2024-07-22 9:14:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5400000",
+        "description": "pembayaran spp th 24 25 sma x.3"
+    },
+    {
+        "siswa_id": "35",
+        "va_creation_date": "2024-07-22 9:14:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5400000",
+        "description": "pembayaran spp th 24 25 sma x.2"
+    },
+    {
+        "siswa_id": "36",
+        "va_creation_date": "2024-07-22 9:14:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4320000",
+        "description": "pembayaran spp th 24 25 sma x.1"
+    },
+    {
+        "siswa_id": "37",
+        "va_creation_date": "2024-07-19 11:41:17",
+        "va_expiry_date": "2025-06-30 18:00:24",
+        "status": "Active",
+        "billing_amount": "5810000",
+        "description": "bayar du spp dll 2425 6 valen"
+    },
+    {
+        "siswa_id": "38",
+        "va_creation_date": "2024-07-19 10:57:49",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "7000000",
+        "description": "pembayaran du spp dll sd kls 6.7"
+    },
+    {
+        "siswa_id": "39",
+        "va_creation_date": "2024-07-19 10:57:49",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "3700000",
+        "description": "pembayaran du spp dll sd kls 6.6"
+    },
+    {
+        "siswa_id": "40",
+        "va_creation_date": "2024-07-19 10:57:49",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4670000",
+        "description": "pembayaran du spp dll sd kls 6.3"
+    },
+    {
+        "siswa_id": "41",
+        "va_creation_date": "2024-07-19 10:57:49",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "3655000",
+        "description": "pembayaran du spp dll sd kls 6.1"
+    },
+    {
+        "siswa_id": "42",
+        "va_creation_date": "2024-07-19 10:57:49",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "10430000",
+        "description": "pembayaran du spp dll sd kls 6.4"
+    },
+    {
+        "siswa_id": "43",
+        "va_creation_date": "2024-07-19 10:57:49",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4190000",
+        "description": "pembayaran du spp dll sd kls 6.2"
+    },
+    {
+        "siswa_id": "44",
+        "va_creation_date": "2024-07-19 10:09:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "6050000",
+        "description": "pembayaran du spp dll sd kls 2.7"
+    },
+    {
+        "siswa_id": "45",
+        "va_creation_date": "2024-07-19 10:09:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "8050000",
+        "description": "pembayaran du spp dll sd kls 2.6"
+    },
+    {
+        "siswa_id": "46",
+        "va_creation_date": "2024-07-19 10:09:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "6200000",
+        "description": "pembayaran du spp dll sd kls 2.5"
+    },
+    {
+        "siswa_id": "47",
+        "va_creation_date": "2024-07-19 10:09:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5900000",
+        "description": "pembayaran du spp dll sd kls 2.4"
+    },
+    {
+        "siswa_id": "48",
+        "va_creation_date": "2024-07-19 10:09:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "6050000",
+        "description": "pembayaran du spp dll sd kls 2.2"
+    },
+    {
+        "siswa_id": "49",
+        "va_creation_date": "2024-07-19 10:09:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "6550000",
+        "description": "pembayaran du spp dll sd kls 2.3"
+    },
+    {
+        "siswa_id": "50",
+        "va_creation_date": "2024-07-19 10:09:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "3750000",
+        "description": "pembayaran du spp dll sd kls 2.1"
+    },
+    {
+        "siswa_id": "51",
+        "va_creation_date": "2024-07-19 9:16:32",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4200000",
+        "description": "pembayaran spp th 2425 tk a Michael"
+    },
+    {
+        "siswa_id": "52",
+        "va_creation_date": "2024-07-19 9:14:28",
+        "va_expiry_date": "2025-06-30 18:00:18",
+        "status": "Active",
+        "billing_amount": "4200000",
+        "description": "pembayaran spp th 2425 tk a Louis"
+    },
+    {
+        "siswa_id": "53",
+        "va_creation_date": "2024-07-19 9:12:14",
+        "va_expiry_date": "2025-06-30 18:00:49",
+        "status": "Active",
+        "billing_amount": "4200000",
+        "description": "pembayaran spp th 2425 tk a Clara"
+    },
+    {
+        "siswa_id": "54",
+        "va_creation_date": "2024-07-19 9:07:21",
+        "va_expiry_date": "2025-06-30 18:00:24",
+        "status": "Active",
+        "billing_amount": "4440000",
+        "description": "pembayaran spp th 2425 tk a shephen"
+    },
+    {
+        "siswa_id": "55",
+        "va_creation_date": "2024-07-19 9:04:40",
+        "va_expiry_date": "2025-06-30 18:00:00",
+        "status": "Active",
+        "billing_amount": "4440000",
+        "description": "pembayaran spp th 2425 kb a shelomita"
+    },
+    {
+        "siswa_id": "56",
+        "va_creation_date": "2024-07-19 9:01:53",
+        "va_expiry_date": "2025-06-30 18:00:06",
+        "status": "Active",
+        "billing_amount": "4200000",
+        "description": "pembayaran spp th 2425 kb a Alyandra"
+    },
+    {
+        "siswa_id": "57",
+        "va_creation_date": "2024-07-18 11:41:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5150000",
+        "description": "Pembayaran spp th 2425 kelas sd 5.2"
+    },
+    {
+        "siswa_id": "58",
+        "va_creation_date": "2024-07-18 11:41:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "9200000",
+        "description": "Pembayaran spp th 2425 kelas sd 4.3"
+    },
+    {
+        "siswa_id": "59",
+        "va_creation_date": "2024-07-18 11:41:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "9950000",
+        "description": "Pembayaran spp th 2425 kelas sd 4.1"
+    },
+    {
+        "siswa_id": "60",
+        "va_creation_date": "2024-07-18 11:41:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "12450000",
+        "description": "Pembayaran spp th 2425 kelas sd 4.4"
+    },
+    {
+        "siswa_id": "61",
+        "va_creation_date": "2024-07-18 11:41:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "12600000",
+        "description": "Pembayaran spp th 2425 kelas sd 4.2"
+    },
+    {
+        "siswa_id": "62",
+        "va_creation_date": "2024-07-18 11:41:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4670000",
+        "description": "Pembayaran spp th 2425 kelas sd 5.1"
+    },
+    {
+        "siswa_id": "63",
+        "va_creation_date": "2024-07-18 11:17:00",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5500000",
+        "description": "Pembayaran spp th 2425 kelas sd 3.4"
+    },
+    {
+        "siswa_id": "64",
+        "va_creation_date": "2024-07-18 11:17:00",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "9000000",
+        "description": "Pembayaran spp th 2425 kelas sd 3.3"
+    },
+    {
+        "siswa_id": "65",
+        "va_creation_date": "2024-07-18 11:16:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "8600000",
+        "description": "Pembayaran spp th 2425 kelas sd 3.1"
+    },
+    {
+        "siswa_id": "66",
+        "va_creation_date": "2024-07-18 11:16:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "6450000",
+        "description": "Pembayaran spp th 2425 kelas sd 3.2"
+    },
+    {
+        "siswa_id": "67",
+        "va_creation_date": "2024-07-18 9:35:49",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "2750000",
+        "description": "pembayaran du spp th 24-25 tk b.5"
+    },
+    {
+        "siswa_id": "68",
+        "va_creation_date": "2024-07-18 9:33:20",
+        "va_expiry_date": "2025-06-30 18:00:38",
+        "status": "Active",
+        "billing_amount": "4550000",
+        "description": "pembayaran du spp th 24-25 tk b.4"
+    },
+    {
+        "siswa_id": "69",
+        "va_creation_date": "2024-07-18 9:30:28",
+        "va_expiry_date": "2025-06-30 18:00:43",
+        "status": "Active",
+        "billing_amount": "4790000",
+        "description": "pembayaran du spp th 24-25 tk b.3"
+    },
+    {
+        "siswa_id": "70",
+        "va_creation_date": "2024-07-18 9:28:21",
+        "va_expiry_date": "2025-06-30 18:00:30",
+        "status": "Active",
+        "billing_amount": "4790000",
+        "description": "pembayaran du spp th 24-25 tk b.2"
+    },
+    {
+        "siswa_id": "71",
+        "va_creation_date": "2024-07-18 9:26:15",
+        "va_expiry_date": "2025-06-30 18:00:26",
+        "status": "Active",
+        "billing_amount": "3950000",
+        "description": "pembayaran du spp th 24-25 sma tk b.1"
+    },
+    {
+        "siswa_id": "72",
+        "va_creation_date": "2024-07-18 9:06:00",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "3600000",
+        "description": "Pembayaran spp th 2425 kelas 7.25"
+    },
+    {
+        "siswa_id": "73",
+        "va_creation_date": "2024-07-18 9:06:00",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5040000",
+        "description": "Pembayaran spp th 2425 kelas 7.24"
+    },
+    {
+        "siswa_id": "74",
+        "va_creation_date": "2024-07-18 9:05:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4200000",
+        "description": "Pembayaran spp th 2425 kelas 7.23"
+    },
+    {
+        "siswa_id": "75",
+        "va_creation_date": "2024-07-18 9:05:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "3600000",
+        "description": "Pembayaran spp th 2425 kelas 7.22"
+    },
+    {
+        "siswa_id": "76",
+        "va_creation_date": "2024-07-18 9:05:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4800000",
+        "description": "Pembayaran spp th 2425 kelas 7.21"
+    },
+    {
+        "siswa_id": "77",
+        "va_creation_date": "2024-07-18 9:05:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "3000000",
+        "description": "Pembayaran spp th 2425 kelas 7.20"
+    },
+    {
+        "siswa_id": "78",
+        "va_creation_date": "2024-07-18 9:05:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5040000",
+        "description": "Pembayaran spp th 2425 kelas 7.19"
+    },
+    {
+        "siswa_id": "79",
+        "va_creation_date": "2024-07-18 9:05:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4440000",
+        "description": "Pembayaran spp th 2425 kelas 7.18"
+    },
+    {
+        "siswa_id": "80",
+        "va_creation_date": "2024-07-18 9:05:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "3600000",
+        "description": "Pembayaran spp th 2425 kelas 7.17"
+    },
+    {
+        "siswa_id": "81",
+        "va_creation_date": "2024-07-18 9:05:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "3000000",
+        "description": "Pembayaran spp th 2425 kelas 7.16"
+    },
+    {
+        "siswa_id": "82",
+        "va_creation_date": "2024-07-18 9:05:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4200000",
+        "description": "Pembayaran spp th 2425 kelas 7.15"
+    },
+    {
+        "siswa_id": "83",
+        "va_creation_date": "2024-07-17 12:04:00",
+        "va_expiry_date": "2025-06-30 18:00:01",
+        "status": "Active",
+        "billing_amount": "4440000",
+        "description": "pembayaran spp th 24 25 smp 7.13"
+    },
+    {
+        "siswa_id": "84",
+        "va_creation_date": "2024-07-17 12:04:00",
+        "va_expiry_date": "2025-06-30 18:00:01",
+        "status": "Active",
+        "billing_amount": "3600000",
+        "description": "pembayaran spp th 24 25 smp 7.12"
+    },
+    {
+        "siswa_id": "85",
+        "va_creation_date": "2024-07-17 12:04:00",
+        "va_expiry_date": "2025-06-30 18:00:01",
+        "status": "Active",
+        "billing_amount": "6040000",
+        "description": "pembayaran spp th 24 25 smp 7.11"
+    },
+    {
+        "siswa_id": "86",
+        "va_creation_date": "2024-07-17 12:04:00",
+        "va_expiry_date": "2025-06-30 18:00:01",
+        "status": "Active",
+        "billing_amount": "6040000",
+        "description": "pembayaran spp th 24 25 smp 7.10"
+    },
+    {
+        "siswa_id": "87",
+        "va_creation_date": "2024-07-17 12:04:00",
+        "va_expiry_date": "2025-06-30 18:00:01",
+        "status": "Active",
+        "billing_amount": "5040000",
+        "description": "pembayaran spp th 24 25 smp 7.9"
+    },
+    {
+        "siswa_id": "88",
+        "va_creation_date": "2024-07-17 12:03:59",
+        "va_expiry_date": "2025-06-30 18:00:01",
+        "status": "Active",
+        "billing_amount": "2400000",
+        "description": "pembayaran spp th 24 25 smp 7.8"
+    },
+    {
+        "siswa_id": "89",
+        "va_creation_date": "2024-07-17 12:03:59",
+        "va_expiry_date": "2025-06-30 18:00:01",
+        "status": "Active",
+        "billing_amount": "4440000",
+        "description": "pembayaran spp th 24 25 smp 7.7"
+    },
+    {
+        "siswa_id": "90",
+        "va_creation_date": "2024-07-17 12:03:59",
+        "va_expiry_date": "2025-06-30 18:00:01",
+        "status": "Active",
+        "billing_amount": "5040000",
+        "description": "pembayaran spp th 24 25 smp 7.6"
+    },
+    {
+        "siswa_id": "91",
+        "va_creation_date": "2024-07-17 12:03:59",
+        "va_expiry_date": "2025-06-30 18:00:01",
+        "status": "Active",
+        "billing_amount": "5040000",
+        "description": "pembayaran spp th 24 25 smp 7.5"
+    },
+    {
+        "siswa_id": "92",
+        "va_creation_date": "2024-07-17 12:03:59",
+        "va_expiry_date": "2025-06-30 18:00:01",
+        "status": "Active",
+        "billing_amount": "4440000",
+        "description": "pembayaran spp th 24 25 smp 7.4"
+    },
+    {
+        "siswa_id": "93",
+        "va_creation_date": "2024-07-17 12:03:59",
+        "va_expiry_date": "2025-06-30 18:00:01",
+        "status": "Active",
+        "billing_amount": "5040000",
+        "description": "pembayaran spp th 24 25 smp 7.3"
+    },
+    {
+        "siswa_id": "94",
+        "va_creation_date": "2024-07-17 12:03:59",
+        "va_expiry_date": "2025-06-30 18:00:01",
+        "status": "Active",
+        "billing_amount": "5040000",
+        "description": "pembayaran spp th 24 25 smp 7.2"
+    },
+    {
+        "siswa_id": "95",
+        "va_creation_date": "2024-07-17 12:03:59",
+        "va_expiry_date": "2025-06-30 18:00:01",
+        "status": "Active",
+        "billing_amount": "5040000",
+        "description": "pembayaran spp th 24 25 smp 7.1"
+    },
+    {
+        "siswa_id": "96",
+        "va_creation_date": "2024-07-17 10:43:27",
+        "va_expiry_date": "2025-06-30 18:00:17",
+        "status": "Active",
+        "billing_amount": "5800000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.35"
+    },
+    {
+        "siswa_id": "97",
+        "va_creation_date": "2024-07-17 10:40:50",
+        "va_expiry_date": "2025-06-30 18:00:21",
+        "status": "Active",
+        "billing_amount": "5500000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.34"
+    },
+    {
+        "siswa_id": "98",
+        "va_creation_date": "2024-07-17 10:39:03",
+        "va_expiry_date": "2025-06-30 18:00:56",
+        "status": "Active",
+        "billing_amount": "7450000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.33"
+    },
+    {
+        "siswa_id": "99",
+        "va_creation_date": "2024-07-17 9:49:26",
+        "va_expiry_date": "2025-06-30 18:00:31",
+        "status": "Active",
+        "billing_amount": "5500000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.32"
+    },
+    {
+        "siswa_id": "100",
+        "va_creation_date": "2024-07-17 9:44:00",
+        "va_expiry_date": "2025-06-30 18:00:08",
+        "status": "Active",
+        "billing_amount": "7150000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.31"
+    },
+    {
+        "siswa_id": "101",
+        "va_creation_date": "2024-07-17 9:41:49",
+        "va_expiry_date": "2025-06-30 18:00:40",
+        "status": "Active",
+        "billing_amount": "8050000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.30"
+    },
+    {
+        "siswa_id": "102",
+        "va_creation_date": "2024-07-17 9:35:14",
+        "va_expiry_date": "2025-06-30 18:00:14",
+        "status": "Active",
+        "billing_amount": "9350000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.29"
+    },
+    {
+        "siswa_id": "103",
+        "va_creation_date": "2024-07-17 9:32:06",
+        "va_expiry_date": "2025-06-30 18:00:26",
+        "status": "Active",
+        "billing_amount": "6100000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.27"
+    },
+    {
+        "siswa_id": "104",
+        "va_creation_date": "2024-07-17 9:28:00",
+        "va_expiry_date": "2025-06-30 18:00:42",
+        "status": "Active",
+        "billing_amount": "11965000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.26"
+    },
+    {
+        "siswa_id": "105",
+        "va_creation_date": "2024-07-17 9:24:28",
+        "va_expiry_date": "2025-06-30 18:28:57",
+        "status": "Active",
+        "billing_amount": "9720000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.25"
+    },
+    {
+        "siswa_id": "106",
+        "va_creation_date": "2024-07-17 9:14:18",
+        "va_expiry_date": "2025-06-30 18:00:01",
+        "status": "Active",
+        "billing_amount": "4600000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.23"
+    },
+    {
+        "siswa_id": "107",
+        "va_creation_date": "2024-07-15 12:55:39",
+        "va_expiry_date": "2025-06-30 18:00:08",
+        "status": "Active",
+        "billing_amount": "7550000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.22"
+    },
+    {
+        "siswa_id": "108",
+        "va_creation_date": "2024-07-15 12:49:01",
+        "va_expiry_date": "2025-06-30 18:00:56",
+        "status": "Active",
+        "billing_amount": "6700000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.18"
+    },
+    {
+        "siswa_id": "109",
+        "va_creation_date": "2024-07-15 12:45:42",
+        "va_expiry_date": "2025-06-30 18:00:45",
+        "status": "Active",
+        "billing_amount": "8050000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.17"
+    },
+    {
+        "siswa_id": "110",
+        "va_creation_date": "2024-07-15 12:42:38",
+        "va_expiry_date": "2025-06-30 18:00:29",
+        "status": "Active",
+        "billing_amount": "5500000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.16"
+    },
+    {
+        "siswa_id": "111",
+        "va_creation_date": "2024-07-15 12:37:20",
+        "va_expiry_date": "2025-06-30 18:00:26",
+        "status": "Active",
+        "billing_amount": "7550000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.15"
+    },
+    {
+        "siswa_id": "112",
+        "va_creation_date": "2024-07-15 12:35:19",
+        "va_expiry_date": "2025-06-30 18:00:51",
+        "status": "Active",
+        "billing_amount": "5800000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.14"
+    },
+    {
+        "siswa_id": "113",
+        "va_creation_date": "2024-07-15 12:30:43",
+        "va_expiry_date": "2025-06-30 18:00:11",
+        "status": "Active",
+        "billing_amount": "7150000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.12"
+    },
+    {
+        "siswa_id": "114",
+        "va_creation_date": "2024-07-15 12:28:03",
+        "va_expiry_date": "2025-06-30 18:00:08",
+        "status": "Active",
+        "billing_amount": "7600000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.11"
+    },
+    {
+        "siswa_id": "115",
+        "va_creation_date": "2024-07-15 12:19:08",
+        "va_expiry_date": "2025-06-30 18:00:35",
+        "status": "Active",
+        "billing_amount": "8500000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.10"
+    },
+    {
+        "siswa_id": "116",
+        "va_creation_date": "2024-07-15 12:06:29",
+        "va_expiry_date": "2025-06-30 18:00:36",
+        "status": "Active",
+        "billing_amount": "11500000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.9"
+    },
+    {
+        "siswa_id": "117",
+        "va_creation_date": "2024-07-15 12:03:37",
+        "va_expiry_date": "2025-06-30 18:00:01",
+        "status": "Active",
+        "billing_amount": "8500000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.8"
+    },
+    {
+        "siswa_id": "118",
+        "va_creation_date": "2024-07-15 11:58:46",
+        "va_expiry_date": "2025-06-30 18:00:06",
+        "status": "Active",
+        "billing_amount": "5800000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.7"
+    },
+    {
+        "siswa_id": "119",
+        "va_creation_date": "2024-07-15 11:57:01",
+        "va_expiry_date": "2025-06-30 18:00:57",
+        "status": "Active",
+        "billing_amount": "5800000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.6"
+    },
+    {
+        "siswa_id": "120",
+        "va_creation_date": "2024-07-15 11:54:50",
+        "va_expiry_date": "2025-06-30 18:00:32",
+        "status": "Active",
+        "billing_amount": "10350000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.5"
+    },
+    {
+        "siswa_id": "121",
+        "va_creation_date": "2024-07-15 11:52:11",
+        "va_expiry_date": "2025-06-30 18:00:41",
+        "status": "Active",
+        "billing_amount": "5800000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.4"
+    },
+    {
+        "siswa_id": "122",
+        "va_creation_date": "2024-07-15 11:50:20",
+        "va_expiry_date": "2025-06-30 18:00:06",
+        "status": "Active",
+        "billing_amount": "9270000",
+        "description": "pembayaran du spp th 24-25 sma kls"
+    },
+    {
+        "siswa_id": "123",
+        "va_creation_date": "2024-07-11 10:41:25",
+        "va_expiry_date": "2025-06-30 18:00:45",
+        "status": "Active",
+        "billing_amount": "7600000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.2"
+    },
+    {
+        "siswa_id": "124",
+        "va_creation_date": "2024-07-11 10:29:55",
+        "va_expiry_date": "2025-06-30 18:00:12",
+        "status": "Active",
+        "billing_amount": "9100000",
+        "description": "pembayaran du spp th 24-25 sma kls 12.24"
+    },
+    {
+        "siswa_id": "125",
+        "va_creation_date": "2024-07-11 9:13:07",
+        "va_expiry_date": "2025-06-30 18:00:23",
+        "status": "Active",
+        "billing_amount": "5080000",
+        "description": "pembayaran du spp th 24-25 smp kls 9 Mauren"
+    },
+    {
+        "siswa_id": "126",
+        "va_creation_date": "2024-07-11 9:11:14",
+        "va_expiry_date": "2025-06-30 18:00:31",
+        "status": "Active",
+        "billing_amount": "5080000",
+        "description": "pembayaran du spp th 24-25 smp kls 9 Maurel"
+    },
+    {
+        "siswa_id": "127",
+        "va_creation_date": "2024-07-11 9:09:15",
+        "va_expiry_date": "2025-06-30 18:00:15",
+        "status": "Active",
+        "billing_amount": "5440000",
+        "description": "pembayaran du spp th 24-25 smp kls 9 Bill"
+    },
+    {
+        "siswa_id": "128",
+        "va_creation_date": "2024-07-11 9:04:56",
+        "va_expiry_date": "2025-06-30 18:00:28",
+        "status": "Active",
+        "billing_amount": "5440000",
+        "description": "pembayaran du spp th 24-25 smp kls 9 Angelina"
+    },
+    {
+        "siswa_id": "129",
+        "va_creation_date": "2024-07-11 9:03:19",
+        "va_expiry_date": "2025-06-30 18:00:42",
+        "status": "Active",
+        "billing_amount": "5440000",
+        "description": "pembayaran du spp th 24-25 smp kls 9 Uzil"
+    },
+    {
+        "siswa_id": "130",
+        "va_creation_date": "2024-07-11 9:01:21",
+        "va_expiry_date": "2025-06-30 18:00:45",
+        "status": "Active",
+        "billing_amount": "5200000",
+        "description": "pembayaran du spp th 24-25 smp kls 9 Josua"
+    },
+    {
+        "siswa_id": "131",
+        "va_creation_date": "2024-07-11 8:59:19",
+        "va_expiry_date": "2025-06-30 18:00:06",
+        "status": "Active",
+        "billing_amount": "4936000",
+        "description": "pembayaran du spp th 24-25 smp kls 9 Fracelia"
+    },
+    {
+        "siswa_id": "132",
+        "va_creation_date": "2024-07-10 11:54:06",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5440000",
+        "description": "pembayaran du/spp th 24-25 kls 8 leonel"
+    },
+    {
+        "siswa_id": "133",
+        "va_creation_date": "2024-07-10 11:51:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4000000",
+        "description": "pembayaran du/spp th 24-25 kls 8 diana"
+    },
+    {
+        "siswa_id": "134",
+        "va_creation_date": "2024-07-10 11:50:00",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5440000",
+        "description": "pembayaran du/spp th 24-25 kls 8 marcella"
+    },
+    {
+        "siswa_id": "135",
+        "va_creation_date": "2024-07-10 11:45:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5440000",
+        "description": "pembayaran du/spp th 24-25 kls 8 putri"
+    },
+    {
+        "siswa_id": "136",
+        "va_creation_date": "2024-07-10 11:38:59",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "2800000",
+        "description": "pembayaran du/spp th 24-25 kls 8 christian"
+    },
+    {
+        "siswa_id": "137",
+        "va_creation_date": "2024-07-10 11:32:01",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4600000",
+        "description": "pembayaran du/spp th 24-25 kls 8 nabila"
+    },
+    {
+        "siswa_id": "138",
+        "va_creation_date": "2024-07-10 11:32:01",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5440000",
+        "description": "pembayaran du/spp th 24-25 kls 8 malvino"
+    },
+    {
+        "siswa_id": "139",
+        "va_creation_date": "2024-07-10 11:32:01",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4000000",
+        "description": "pembayaran du/spp th 24-25 kls 8 finno"
+    },
+    {
+        "siswa_id": "140",
+        "va_creation_date": "2024-07-10 11:32:01",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "5440000",
+        "description": "pembayaran du/spp th 24-25 kls 8 argyasya"
+    },
+    {
+        "siswa_id": "141",
+        "va_creation_date": "2024-07-10 11:32:01",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4600000",
+        "description": "pembayaran du/spp th 24-25 kls 8 andreas bay"
+    },
+    {
+        "siswa_id": "142",
+        "va_creation_date": "2024-07-10 11:32:01",
+        "va_expiry_date": "2025-06-30 18:00:59",
+        "status": "Active",
+        "billing_amount": "4600000",
+        "description": "pembayaran du/spp th 24-25 kls 8 shannon"
+    },
+    {
+        "siswa_id": "143",
+        "va_creation_date": "2024-07-10 9:36:58",
+        "va_expiry_date": "2025-06-30 18:00:00",
+        "status": "Active",
+        "billing_amount": "5200000",
+        "description": "pembayaran du spp th 24-25 smp kls 8 Gio"
+    },
+    {
+        "siswa_id": "144",
+        "va_creation_date": "2024-07-05 13:08:25",
+        "va_expiry_date": "2025-06-30 0:00:23",
+        "status": "Active",
+        "billing_amount": "6250000",
+        "description": "pembayaran spp th 24-25 jeremy c"
+    },
+    {
+        "siswa_id": "145",
+        "va_creation_date": "2024-07-04 13:02:50",
+        "va_expiry_date": "2025-06-30 16:28:16",
+        "status": "Active",
+        "billing_amount": "2400000",
+        "description": "pembayaran spp th 24-25 jonathan"
+    },
+    {
+        "siswa_id": "146",
+        "va_creation_date": "2024-07-04 13:00:21",
+        "va_expiry_date": "2025-06-30 17:00:04",
+        "status": "Active",
+        "billing_amount": "2400000",
+        "description": "pembayaran spp th 24-25 Nikodemus Hefin"
+    },
+    {
+        "siswa_id": "147",
+        "va_creation_date": "2024-07-04 12:58:14",
+        "va_expiry_date": "2025-06-30 17:12:30",
+        "status": "Active",
+        "billing_amount": "2400000",
+        "description": "pembayaran spp th 24-25 gevariel fryan"
+    },
+    {
+        "siswa_id": "148",
+        "va_creation_date": "2024-07-04 12:55:23",
+        "va_expiry_date": "2025-06-30 12:00:44",
+        "status": "Active",
+        "billing_amount": "3000000",
+        "description": "pembayaran spp th 24-25 felycia"
+    },
+    {
+        "siswa_id": "149",
+        "va_creation_date": "2024-07-04 12:52:48",
+        "va_expiry_date": "2025-06-30 16:00:49",
+        "status": "Active",
+        "billing_amount": "2400000",
+        "description": "pembayaran spp th 24-25 M ainur"
+    },
+    {
+        "siswa_id": "150",
+        "va_creation_date": "2024-07-04 12:47:13",
+        "va_expiry_date": "2025-06-30 12:44:43",
+        "status": "Active",
+        "billing_amount": "4200000",
+        "description": "pembayaran spp th 24-25 leonathan"
+    },
+    {
+        "siswa_id": "151",
+        "va_creation_date": "2024-07-02 12:00:59",
+        "va_expiry_date": "2025-06-30 18:00:06",
+        "status": "Active",
+        "billing_amount": "8120000",
+        "description": "Pembayaran DU SPP  th 24-15 SMA 11.25"
+    },
+    {
+        "siswa_id": "152",
+        "va_creation_date": "2024-07-02 11:51:48",
+        "va_expiry_date": "2025-06-30 18:00:53",
+        "status": "Active",
+        "billing_amount": "3775000",
+        "description": "Pembayaran DU SPP  th 24-15 SMA 11.23"
+    },
+    {
+        "siswa_id": "153",
+        "va_creation_date": "2024-07-02 11:50:42",
+        "va_expiry_date": "2025-06-30 18:00:40",
+        "status": "Active",
+        "billing_amount": "4325000",
+        "description": "Pembayaran DU SPP  th 24-15 SMA 11.22"
+    },
+    {
+        "siswa_id": "154",
+        "va_creation_date": "2024-07-02 11:44:37",
+        "va_expiry_date": "2025-06-30 18:00:36",
+        "status": "Active",
+        "billing_amount": "7150000",
+        "description": "Pembayaran DU SPP  th 24-15 SMA 11.21"
+    },
+    {
+        "siswa_id": "155",
+        "va_creation_date": "2024-07-02 11:43:25",
+        "va_expiry_date": "2025-06-30 18:00:15",
+        "status": "Active",
+        "billing_amount": "9100000",
+        "description": "Pembayaran DU SPP  th 24-15 SMA 11.20"
+    },
+    {
+        "siswa_id": "156",
+        "va_creation_date": "2024-07-02 11:42:08",
+        "va_expiry_date": "2025-06-30 18:00:02",
+        "status": "Active",
+        "billing_amount": "8815000",
+        "description": "Pembayaran DU SPP  th 24-15 SMA 11. 19"
+    },
+    {
+        "siswa_id": "157",
+        "va_creation_date": "2024-07-02 11:39:44",
+        "va_expiry_date": "2025-06-30 18:00:26",
+        "status": "Active",
+        "billing_amount": "6880000",
+        "description": "Pembayaran DU SPP  th 24-15 SMA 11. 18"
+    },
+    {
+        "siswa_id": "158",
+        "va_creation_date": "2024-07-02 11:38:13",
+        "va_expiry_date": "2025-06-30 18:00:41",
+        "status": "Active",
+        "billing_amount": "7285000",
+        "description": "Pembayaran DU SPP  th 24-15 SMA 11. 17"
+    },
+    {
+        "siswa_id": "159",
+        "va_creation_date": "2024-07-02 11:35:31",
+        "va_expiry_date": "2025-06-30 18:00:15",
+        "status": "Active",
+        "billing_amount": "9000000",
+        "description": "Pembayaran DU SPP  th 24-15 SMA 11. 16"
+    },
+    {
+        "siswa_id": "160",
+        "va_creation_date": "2024-07-02 11:33:48",
+        "va_expiry_date": "2025-06-30 18:00:36",
+        "status": "Active",
+        "billing_amount": "7850000",
+        "description": "Pembayaran DU SPP  th 24-15 SMA 11. 15"
+    },
+    {
+        "siswa_id": "161",
+        "va_creation_date": "2024-07-02 11:05:11",
+        "va_expiry_date": "2025-06-30 18:00:55",
+        "status": "Active",
+        "billing_amount": "5760000",
+        "description": "Pembayaran DU SPP th 24-15 SMA 11. 14"
+    },
+    {
+        "siswa_id": "162",
+        "va_creation_date": "2024-07-02 11:03:39",
+        "va_expiry_date": "2025-06-30 18:00:32",
+        "status": "Active",
+        "billing_amount": "8320000",
+        "description": "Pembayaran DU SPP  th 24-15 SMA 11. 13"
+    },
+    {
+        "siswa_id": "163",
+        "va_creation_date": "2024-07-02 11:02:23",
+        "va_expiry_date": "2025-06-30 18:00:06",
+        "status": "Active",
+        "billing_amount": "6520000",
+        "description": "Pembayaran DU SPP th 24-15 SMA 11. 12 camelia"
+    },
+    {
+        "siswa_id": "164",
+        "va_creation_date": "2024-07-02 8:03:17",
+        "va_expiry_date": "2025-06-30 18:00:06",
+        "status": "Active",
+        "billing_amount": "4720000",
+        "description": "Pembayaran DU SPP  th 24-15 SMA 11. 1"
+    },
+    {
+        "siswa_id": "165",
+        "va_creation_date": "2024-07-01 7:53:40",
+        "va_expiry_date": "2025-06-30 18:00:35",
+        "status": "Active",
+        "billing_amount": "9715000",
+        "description": "Pembayaran DU SPP  th 24-15 SMA 11. 10"
+    },
+    {
+        "siswa_id": "166",
+        "va_creation_date": "2024-07-01 7:50:34",
+        "va_expiry_date": "2025-06-30 18:00:04",
+        "status": "Active",
+        "billing_amount": "7600000",
+        "description": "Pembayaran DU SPP SPP  th 24-15 SMA 11. 9"
+    },
+    {
+        "siswa_id": "167",
+        "va_creation_date": "2024-07-01 7:48:40",
+        "va_expiry_date": "2025-06-30 18:00:36",
+        "status": "Active",
+        "billing_amount": "6160000",
+        "description": "Pembayaran DU SPP  th 24-15 SMA 11. 8"
+    },
+    {
+        "siswa_id": "168",
+        "va_creation_date": "2024-07-01 7:47:13",
+        "va_expiry_date": "2025-06-30 18:00:28",
+        "status": "Active",
+        "billing_amount": "7550000",
+        "description": "Pembayaran DU SPP  th 24-15 SMA 11. 7"
+    },
+    {
+        "siswa_id": "169",
+        "va_creation_date": "2024-07-01 7:45:16",
+        "va_expiry_date": "2025-06-30 18:00:11",
+        "status": "Active",
+        "billing_amount": "8050000",
+        "description": "Pembayaran DU spp  th 24-15 SMA 11. 6"
+    },
+    {
+        "siswa_id": "170",
+        "va_creation_date": "2024-07-01 7:43:10",
+        "va_expiry_date": "2025-06-30 18:00:50",
+        "status": "Active",
+        "billing_amount": "6250000",
+        "description": "Pembayaran DU  th 24-15 SMA 11. 5"
+    },
+    {
+        "siswa_id": "171",
+        "va_creation_date": "2024-07-01 7:37:01",
+        "va_expiry_date": "2025-06-30 0:00:17",
+        "status": "Active",
+        "billing_amount": "4900000",
+        "description": "Pembayaran SPP, DU  th 24-15 SMA Samuel k"
+    },
+    {
+        "siswa_id": "172",
+        "va_creation_date": "2024-06-30 23:46:10",
+        "va_expiry_date": "2025-06-30 18:00:01",
+        "status": "Active",
+        "billing_amount": "7650000",
+        "description": "Pembayaran SPP, DU  th 24-15 SMA NELSEN"
+    },
+    {
+        "siswa_id": "173",
+        "va_creation_date": "2024-06-30 23:40:47",
+        "va_expiry_date": "2025-06-30 0:00:00",
+        "status": "Active",
+        "billing_amount": "5910000",
+        "description": "Pembayaran DU  th 24-15 SMA 11 Titus"
+    }
+]
