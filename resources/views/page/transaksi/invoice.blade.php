@@ -66,7 +66,7 @@
                                             <th>Type Pembayaran</th>
                                             <th>Keterangan Pembayaran</th>
                                             <th>Bulan</th>
-                                            <th>SPP Tiap Bulan</th>
+                                            {{-- <th>SPP Tiap Bulan</th> --}}
                                             <th>Pembayaran</th>
                                         </tr></thead>
                                         <tbody>
@@ -74,7 +74,7 @@
                                             <td>{{ $transaksi->id }}</td>
                                             <td>{{ $transaksi->type_pembayaran }}</td>
                                             <td>{{ $transaksi->keterangan }}</td>
-                                            <td>{{ $transaksi->bulan }}</td>
+                                            {{-- <td>{{ $transaksi->bulan }}</td> --}}
                                             <td>Rp.{{ $transaksi->tagihan->siswa->spp_tiap_bulan }}</td>
                                             <td>Rp.{{ $transaksi->nominal_bayar }}</td>
                                         </tr>
