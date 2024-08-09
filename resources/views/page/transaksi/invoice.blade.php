@@ -96,7 +96,7 @@
                                 {{-- <p class="text-end">Pembayaran : {{ $transaksi->nominal_bayar }}</p> --}}
                                 {{-- <p class="text-end">Kurang : {{ $transaksi->tagihan->siswa->spp_tiap_bulan - $transaksi->nominal_bayar }}</p> --}}
                               
-                                <h3 class="text-end">Nominal Pembayaran RP. {{ $transaksi->nominal_bayar }}</h3>
+                                <h3 class="text-end">Pembayaran RP. {{ $transaksi->nominal_bayar }}</h3>
                             </div>
                         </div>
                      
