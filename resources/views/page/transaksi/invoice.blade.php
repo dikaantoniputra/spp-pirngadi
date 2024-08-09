@@ -42,7 +42,7 @@
                                     </address>
                                 </div>
                                 <div class="float-end">
-                                    <p><strong>Order Pembayaran: </strong> {{ $transaksi->updated_at->format('d-m-Y') }}</p>
+                                    <p><strong>Order Pembayaran: </strong> {{ $transaksi->updated_at }}</p>
 
                                     <p><strong>Order Status: </strong> <span class="label label-pink">@if ($transaksi->status == 0)
                                         Sukses
