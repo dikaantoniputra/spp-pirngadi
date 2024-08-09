@@ -37,6 +37,7 @@
                                     <address>
                                         <strong>Nama Siswa : {{ $transaksi->tagihan->siswa->name }}</strong><br>
                                         Va Number : {{ $transaksi->tagihan->siswa->va_number }}<br>
+                                        Jenjang : {{ $transaksi->tagihan->siswa->jenjang }}<br>
                                         Kelas : {{ $transaksi->tagihan->siswa->kelas }}<br>
                                         Telepon : {{ $transaksi->tagihan->siswa->phone }}
                                     </address>

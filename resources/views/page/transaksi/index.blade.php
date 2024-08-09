@@ -30,6 +30,7 @@
                         <th>Invoice</th>
                         <th>PJ</th>
                         <th>Siswa</th>
+                        <th>Jenjang</th>
                         <th>Kelas</th>
                         <th>Type Pembayaran</th>
                         <th>Bulan</th>
@@ -47,6 +48,7 @@
                         <td>{{ $transaksi->invoince }}</td>
                         <td>{{ $transaksi->user->name }}</td>
                         <td>{{ $transaksi->tagihan->siswa->name }}</td>
+                        <td>{{ $transaksi->tagihan->siswa->jenjang }}</td>
                         <td>{{ $transaksi->tagihan->siswa->kelas }}</td>
                         <td>{{ $transaksi->type_pembayaran }}</td>
                         <td>{{ $transaksi->bulan }}</td>
