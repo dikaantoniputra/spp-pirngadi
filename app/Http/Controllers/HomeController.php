@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Siswa;
 use App\Models\Transaksi;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -26,9 +27,22 @@ class HomeController extends Controller
         
         // Hitung total nominal_bayar dalam rentang waktu tersebut
         $totalNominalBayar = $transaksi->sum('nominal_bayar');
+
+        $siswaSMA = Siswa::where('jenjang', 'SMA')->pluck('id');
+
+        // Ambil semua transaksi dalam rentang tanggal yang ditentukan dan sesuai dengan siswa SMA
+        $transaksisma = Transaksi::whereBetween('created_at', [$startDate, $endDate])
+                            ->whereIn('tagihan_id', function($query) use ($siswaSMA) {
+                                $query->select('id')
+                                        ->from('tagihans') // Pastikan ini adalah nama tabel yang benar
+                                        ->whereIn('siswa_id', $siswaSMA);
+                            })->get();
+
+        // Hitung total nominal_bayar dalam rentang waktu tersebut
+        $totalNominalBayarSMA = $transaksisma->sum('nominal_bayar');
         
         // Kirimkan hasil ke view atau lakukan hal lain
-        return view('page.index', compact('totalNominalBayar'));
+        return view('page.index', compact('totalNominalBayar','totalNominalBayarSMA'));
     }
     
 
