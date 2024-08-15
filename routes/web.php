@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\TagihanController;
 use App\Http\Controllers\TransaksiController;
@@ -31,19 +32,18 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::group(['middleware' => ['auth']], function () {
 
-    // Rute umum untuk admin dan freelancer
     Route::group(['prefix' => 'admin', 'middleware' => 'role:admin'], function () {
-        Route::get('/', function () {
-            return view('page.index');
-        })->name('admin.dashboard');
+        // Route::get('/', function () {
+        //     return view('page.index');
+        // })->name('admin.dashboard');
+
+        Route::get('/', [HomeController::class, 'index'])->name('admin.dashboard');
+
         Route::resource('user', UserController::class);
         Route::resource('siswa', SiswaController::class);
     });
-
     Route::resource('transaksi', TransaksiController::class);
-
     Route::resource('tagihan', TagihanController::class);
-
 });
 
 Route::get('/', function () {
