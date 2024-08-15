@@ -46,15 +46,15 @@
                     @forelse ($transaksi as $transaksi)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $transaksi->invoince }}</td>
-                        <td>{{ $transaksi->user->name }}</td>
-                        <td>{{ $transaksi->tagihan->siswa->name }}</td>
-                        <td>{{ $transaksi->tagihan->siswa->jenjang }}</td>
-                        <td>{{ $transaksi->tagihan->siswa->kelas }}</td>
-                        <td>{{ $transaksi->type_pembayaran }}</td>
-                        <td>{{ $transaksi->bulan }}</td>
-                        <td>{{ $transaksi->nominal_bayar }}</td>
-                        <td>{{ $transaksi->deskripsi }}</td>
+                        <td>{{ $transaksi->invoince ?? '' }}</td>
+                        <td>{{ $transaksi->user->name ?? '' }}</td>
+                        <td>{{ $transaksi->tagihan->siswa->name ?? '' }}</td>
+                        <td>{{ $transaksi->tagihan->siswa->jenjang ?? '' }}</td>
+                        <td>{{ $transaksi->tagihan->siswa->kelas ?? '' }}</td>
+                        <td>{{ $transaksi->type_pembayaran ?? '' }}</td>
+                        <td>{{ $transaksi->bulan ?? '' }}</td>
+                        <td>{{ $transaksi->nominal_bayar ?? '' }}</td>
+                        <td>{{ $transaksi->deskripsi ?? '' }}</td>
                    
                         <td>
                             <div class="table-actions d-flex align-items-center gap-2 fs-6">
