@@ -91,6 +91,7 @@
                         <div class="row">
                             <div class="col-xl-6 col-6">
                                 <div class="clearfix">
+                                    <h5 class="small text-dark fw-normal">Keterangan: {{ $transaksi->deskripsi }}</h5>
                                     <h5 class="small text-dark fw-normal">Nama Petugas: {{ $transaksi->user->name }}</h5>
                                    
                                 </div>

@@ -35,6 +35,7 @@
                         <th>Type Pembayaran</th>
                         <th>Bulan</th>
                         <th>Nominal</th>
+                        <th>Deskripsi</th>
                         <th>action</th>
                     </tr>
                     </thead>
@@ -53,6 +54,7 @@
                         <td>{{ $transaksi->type_pembayaran }}</td>
                         <td>{{ $transaksi->bulan }}</td>
                         <td>{{ $transaksi->nominal_bayar }}</td>
+                        <td>{{ $transaksi->deskripsi }}</td>
                    
                         <td>
                             <div class="table-actions d-flex align-items-center gap-2 fs-6">

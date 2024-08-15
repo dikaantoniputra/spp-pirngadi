@@ -49,22 +49,19 @@
                     </div> 
 
                     @yield('content')
-                </div>
+                </div> <!-- content -->
+
+                <!-- Footer Start -->
+                @include('include.footer')
+                <!-- end Footer -->
+    
             </div>
-           
-            <!-- Footer Start -->
-            @include('include.footer')
-            <!-- end Footer -->
-                
-
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+    
+    
         </div>
-        <!-- ============================================================== -->
-        <!-- End Page content -->
-        <!-- ============================================================== -->
-
-
-    </div>
-    <!-- END wrapper -->
 
     <!-- Right Sidebar -->
     @include('include.rightsidebar')
