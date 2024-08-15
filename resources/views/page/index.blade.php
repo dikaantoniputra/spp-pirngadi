@@ -66,7 +66,7 @@
                 <div class="widget-box-2">
                     <div class="widget-detail-2 text-end">
                         <span class="badge bg-success rounded-pill float-start mt-3">32% <i class="mdi mdi-trending-up"></i> </span>
-                        <h2 class="fw-normal mb-1"> {{ $totalNominalBayarSMA ?? }} </h2>
+                        <h2 class="fw-normal mb-1"> {{ $totalNominalBayarSMA  }} </h2>
                         <p class="text-muted mb-3">Revenue today</p>
                     </div>
                     <div class="progress progress-bar-alt-success progress-sm">
