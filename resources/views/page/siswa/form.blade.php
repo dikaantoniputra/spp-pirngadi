@@ -23,7 +23,7 @@
             <div class="row mb-3">
                 <label for="inputEmail3" class="col-4 col-form-label">email<span class="text-danger"> *</span></label>
                 <div class="col-7">
-                    <input type="email" required parsley-type="email" class="form-control" id="nik"
+                    <input type="text" required parsley-type="email" class="form-control" id="nik"
                         name="email" placeholder="email" value="{{ $user->name ?? '' }}" />
                    
                 </div>
