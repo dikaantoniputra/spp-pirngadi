@@ -67,6 +67,11 @@
                     @endforelse
                     </tbody>
                 </table>
+                <div>
+                    <h4 id="total-before-filter">Total Semua Pendapatan: 0</h4>
+                    <h4 id="total-after-filter">Total Hasil Filter: 0</h4>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -99,67 +104,84 @@
 <script src="{{ asset('') }}assets/libs/pdfmake/build/vfs_fonts.js"></script>
 <!-- third party js ends -->
 <script>
-    "use strict";
-    $(document).ready(function() {
-        // Initialize DataTable with buttons
-        var table = $("#datatable-buttons").DataTable({
-            lengthChange: false,
-            dom: "Bfrtip",  // Ensure buttons are properly initialized
-            buttons: [
-                {
-                    extend: "copy",
-                    text: "Copy",
-                },
-                {
-                    extend: "csv",
-                    text: "CSV",
-                },
-                {
-                    extend: "pdf",
-                    text: "PDF",
-                    orientation: "landscape",  // Set orientation to landscape
-                    pageSize: "A4",             // Optional: set page size
-                    customize: function (doc) {
-                        // Set orientation to landscape if not applied
-                        if (doc.pageOrientation !== "landscape") {
-                            doc.pageOrientation = "landscape";
-                        }
+  $(document).ready(function() {
+    var table = $("#datatable-buttons").DataTable({
+        lengthChange: false,
+        dom: "Bfrtip",
+        buttons: [
+            {
+                extend: "copy",
+                text: "Copy",
+            },
+            {
+                extend: "csv",
+                text: "CSV",
+            },
+            {
+                extend: "pdf",
+                text: "PDF",
+                orientation: "landscape",
+                pageSize: "A4",
+                customize: function (doc) {
+                    if (doc.pageOrientation !== "landscape") {
+                        doc.pageOrientation = "landscape";
                     }
                 }
-            ]
-        });
-
-
-        table.buttons().container().appendTo("#datatable-buttons_wrapper .col-md-6:eq(0)");
-        $("#datatable_length select[name*='datatable_length']").addClass("form-select form-select-sm").removeClass("custom-select custom-select-sm");
-        $(".dataTables_length label").addClass("form-label");
-
-        // Date Range Filter
-        $.fn.dataTable.ext.search.push(function(settings, data, dataIndex) {
-            var startDate = new Date($('#start_date').val());
-            var endDate = new Date($('#end_date').val());
-            var createdAt = new Date(data[1]); // Adjust index as per 'created_at' column
-
-            // Normalize dates (remove time part for easier comparison)
-            startDate.setHours(0, 0, 0, 0);
-            endDate.setHours(23, 59, 59, 999);
-            createdAt.setHours(0, 0, 0, 0);
-
-            if (
-                (isNaN(startDate.getTime()) && isNaN(endDate.getTime())) ||
-                (isNaN(startDate.getTime()) && createdAt <= endDate) ||
-                (startDate <= createdAt && isNaN(endDate.getTime())) ||
-                (startDate <= createdAt && createdAt <= endDate)
-            ) {
-                return true;
             }
-            return false;
-        });
-
-        $('#start_date, #end_date').on('change', function() {
-            table.draw();
-        });
+        ]
     });
+
+    table.buttons().container().appendTo("#datatable-buttons_wrapper .col-md-6:eq(0)");
+    $("#datatable_length select[name*='datatable_length']").addClass("form-select form-select-sm").removeClass("custom-select custom-select-sm");
+    $(".dataTables_length label").addClass("form-label");
+
+    // Function to calculate total of nominal_bayar column
+    function calculateTotal() {
+        var total = 0;
+        table.rows({ filter: 'applied' }).every(function() {
+            var data = this.data();
+            var nominal = parseFloat(data[7]); // Index of nominal_bayar column
+            if (!isNaN(nominal)) {
+                total += nominal;
+            }
+        });
+        return total;
+    }
+
+    // Display total before filtering
+    $('#total-before-filter').text('Total Before Filter: ' + calculateTotal());
+
+    // Update total after filtering
+    table.on('draw', function() {
+        $('#total-after-filter').text('Total After Filter: ' + calculateTotal());
+    });
+
+    // Date Range Filter
+    $.fn.dataTable.ext.search.push(function(settings, data, dataIndex) {
+        var startDate = new Date($('#start_date').val());
+        var endDate = new Date($('#end_date').val());
+        var createdAt = new Date(data[1]);
+
+        startDate.setHours(0, 0, 0, 0);
+        endDate.setHours(23, 59, 59, 999);
+        createdAt.setHours(0, 0, 0, 0);
+
+        if (
+            (isNaN(startDate.getTime()) && isNaN(endDate.getTime())) ||
+            (isNaN(startDate.getTime()) && createdAt <= endDate) ||
+            (startDate <= createdAt && isNaN(endDate.getTime())) ||
+            (startDate <= createdAt && createdAt <= endDate)
+        ) {
+            return true;
+        }
+        return false;
+    });
+
+    $('#start_date, #end_date').on('change', function() {
+        table.draw();
+    });
+});
+
 </script>
 
 
