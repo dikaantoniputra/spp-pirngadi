@@ -8,15 +8,20 @@
                 <label for="hori-pass1" class="col-4 col-form-label">Nama Siswa<span class="text-danger"> *</span></label>
                 <div class="col-7">
                     <select class="form-control" data-toggle="select2" data-width="100%" name="tagihan_id">
-                        <option>Cari</option>
-                        @forelse ($tagihan as $tagihan)
-                            <option value="{{ $tagihan->id }}">
-                                {{ $tagihan->siswa->name }} - {{ $tagihan->siswa->va_number }}
+                        <option disabled selected>Cari</option>
+                    
+                        @forelse ($tagihan as $item)
+                            <option value="{{ $item->id }}" 
+                                {{ isset($transaksi) && $item->id == $transaksi->tagihan_id ? 'selected' : '' }}>
+                                {{ $item->siswa->name }} - {{ $item->siswa->va_number }}
                             </option>
                         @empty
-                            <div>Data Kosong</div>
+                            <option disabled>Data Kosong</option>
                         @endforelse
                     </select>
+                    
+
+                   
                   
                 </div> <!-- end col -->
             </div>
@@ -25,7 +30,7 @@
                 <label for="hori-pass1" class="col-4 col-form-label">Nominal<span class="text-danger"> *</span></label>
                 <div class="col-7">
                     <div class="input-group">
-                        <input id="password" name="nominal_bayar" type="number" placeholder="Nominal" required class="form-control" value="{{ $user->password ?? '' }}" />
+                        <input id="password" name="nominal_bayar" type="number" placeholder="Nominal" required class="form-control" value="{{ $transaksi->nominal_bayar ?? '' }}" />
                        
                     </div>  
                 </div>
@@ -36,9 +41,9 @@
                         *</span></label>
                 <div class="col-7">
                     <select class="form-select" name="type_pembayaran">
-                        <option selected>Open this select menu</option>
-                        <option value="va">VA SISWA</option>
-                        <option value="kasir">KASIR</option>
+                        <option selected disabled>Open this select menu</option>
+                        <option value="va" {{ isset($transaksi) && $transaksi->type_pembayaran == 'va' ? 'selected' : '' }}>VA SISWA</option>
+                        <option value="kasir" {{ isset($transaksi) && $transaksi->type_pembayaran == 'kasir' ? 'selected' : '' }}>KASIR</option>
                         
                     </select>
                 </div>
@@ -50,9 +55,9 @@
                 <div class="col-7">
                     <select class="form-select" name="keterangan">
                         <option selected>Keterangan Pembayaran</option>
-                        <option value="spp">SPP</option>
-                        <option value="du">DU</option>
-                        <option value="lain-lain">LAIN-LAIN</option>
+                        <option value="spp" {{ isset($transaksi) && $transaksi->keterangan == 'spp' ? 'selected' : '' }}>SPP</option>
+                        <option value="du" {{ isset($transaksi) && $transaksi->keterangan == 'du' ? 'selected' : '' }}>DU</option>
+                        <option value="lain-lain" {{ isset($transaksi) && $transaksi->keterangan == 'lain-lain' ? 'selected' : '' }}>LAIN-LAIN</option>
                         
                     </select>
                 </div>
@@ -63,18 +68,18 @@
                 <div class="col-7">
                     <select class="form-select" name="bulan">
                         <option selected>Pilih Bulan</option>
-                        <option value="januari">Januari</option>
-                        <option value="februari">Februari</option>
-                        <option value="maret">Maret</option>
-                        <option value="april">April</option>
-                        <option value="mei">Mei</option>
-                        <option value="juni">Juni</option>
-                        <option value="juli">Juli</option>
-                        <option value="agustus">Agustus</option>
-                        <option value="september">September</option>
-                        <option value="oktober">Oktober</option>
-                        <option value="november">November</option>
-                        <option value="desember">Desember</option>
+                        <option value="januari" {{ isset($transaksi) && $transaksi->bulan == 'januari' ? 'selected' : '' }}>Januari</option>
+                        <option value="februari" {{ isset($transaksi) && $transaksi->bulan == 'februari' ? 'selected' : '' }}>Februari</option>
+                        <option value="maret" {{ isset($transaksi) && $transaksi->bulan == 'maret' ? 'selected' : '' }}>Maret</option>
+                        <option value="april" {{ isset($transaksi) && $transaksi->bulan == 'april' ? 'selected' : '' }}>April</option>
+                        <option value="mei" {{ isset($transaksi) && $transaksi->bulan == 'mei' ? 'selected' : '' }}>Mei</option>
+                        <option value="juni" {{ isset($transaksi) && $transaksi->bulan == 'juni' ? 'selected' : '' }}>Juni</option>
+                        <option value="juli" {{ isset($transaksi) && $transaksi->bulan == 'juli' ? 'selected' : '' }}>Juli</option>
+                        <option value="agustus" {{ isset($transaksi) && $transaksi->bulan == 'agustus' ? 'selected' : '' }}>Agustus</option>
+                        <option value="september" {{ isset($transaksi) && $transaksi->bulan == 'september' ? 'selected' : '' }}>September</option>
+                        <option value="oktober" {{ isset($transaksi) && $transaksi->bulan == 'oktober' ? 'selected' : '' }}>Oktober</option>
+                        <option value="november" {{ isset($transaksi) && $transaksi->bulan == 'november' ? 'selected' : '' }}>November</option>
+                        <option value="desember" {{ isset($transaksi) && $transaksi->bulan == 'desember' ? 'selected' : '' }}>Desember</option>
                     </select>
                 </div>
             </div>
@@ -84,7 +89,17 @@
                 <label for="inputEmail3" class="col-4 col-form-label">Deskripsi Pembayaran<span class="text-danger">
                      </span></label>
                 <div class="col-7">
-                    <textarea class="form-control" id="example-textarea" name="deskripsi" rows="5"></textarea>
+                    <textarea class="form-control" id="example-textarea" name="deskripsi" rows="5">{{ $transaksi->deskripsi ?? '' }}</textarea>
+                </div>
+            </div>
+
+            <h6>Note: Tidak perlu di isi jika tidak loncat bulan</h6>
+            <div class="row mb-3">
+                <label for="va_creation_date" class="col-4 col-form-label">Tgl-pembayaran<span class="text-danger"> *</span></label>
+                <div class="col-7">
+                    <div class="input-group">
+                        <input id="va_creation_date" name="created_at" type="datetime-local"  class="form-control" value="{{ old('created_at', $transaksi->created_at ?? '') }}" />
+                    </div>  
                 </div>
             </div>
 

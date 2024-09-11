@@ -36,9 +36,9 @@ class TransaksiController extends Controller
      */
     public function create()
     {
-        $siswa = Siswa::all();
+        // $siswa = Siswa::all();
         $tagihan = Tagihan::all();
-        return view('page.transaksi.create', compact('siswa','tagihan'));
+        return view('page.transaksi.create', compact('tagihan'));
     }
 
     /**
@@ -64,6 +64,8 @@ class TransaksiController extends Controller
             $transaksi->invoince = $slug;
     
             // Save the Transaksi to the database
+            $transaksi->created_at = now();
+            
             $transaksi->save();
     
             // Flash success message and redirect to the transaksi index page
@@ -97,9 +99,11 @@ class TransaksiController extends Controller
      * @param  \App\Models\Transaksi  $transaksi
      * @return \Illuminate\Http\Response
      */
-    public function edit(Transaksi $transaksi)
+    public function edit($id)
     {
-        //
+        $transaksi = Transaksi::select('*')->findOrFail($id);
+        $tagihan = Tagihan::all();
+        return view('page.transaksi.edit', compact('tagihan','transaksi'));
     }
 
     /**
@@ -109,10 +113,36 @@ class TransaksiController extends Controller
      * @param  \App\Models\Transaksi  $transaksi
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Transaksi $transaksi)
+    public function update(Request $request, $id)
     {
-        //
+        try {
+            // Find the Transaksi instance by ID
+            $transaksi = Transaksi::findOrFail($id);
+    
+            // Update the specific fields
+            $transaksi->update([
+                'tagihan_id' => $request->input('tagihan_id'),
+                'nominal_bayar' => $request->input('nominal_bayar'),
+                'type_pembayaran' => $request->input('type_pembayaran'),
+                'keterangan' => $request->input('keterangan'),
+                'bulan' => $request->input('bulan'),
+                'deskripsi' => $request->input('deskripsi'),
+                'created_at' => $request->input('created_at'),
+                // add more fields as needed
+            ]);
+    
+            // Flash success message and redirect to the transaksi index page
+            $request->session()->flash('success', 'Berhasil memperbarui.');
+            return redirect()->route('transaksi.index')->with('success', 'Data berhasil diperbarui.');
+    
+        } catch (\Exception $e) {
+            // Flash error messages and redirect back with input
+            $request->session()->flash('error', 'Gagal memperbarui.');
+            $request->session()->flash('error-details', $e->getMessage());
+            return redirect()->back()->withInput();
+        }
     }
+    
 
     /**
      * Remove the specified resource from storage.
@@ -120,8 +150,24 @@ class TransaksiController extends Controller
      * @param  \App\Models\Transaksi  $transaksi
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Transaksi $transaksi)
+    public function destroy($id)
     {
-        //
+        try {
+            // Find the Transaksi instance by ID
+            $transaksi = Transaksi::findOrFail($id);
+    
+            // Delete the Transaksi instance
+            $transaksi->delete();
+    
+            // Flash success message and redirect to the transaksi index page
+            session()->flash('success', 'Data berhasil dihapus.');
+            return redirect()->route('transaksi.index');
+    
+        } catch (\Exception $e) {
+            // Flash error message and redirect back
+            session()->flash('error', 'Gagal menghapus data.');
+            session()->flash('error-details', $e->getMessage());
+            return redirect()->back();
+        }
     }
 }

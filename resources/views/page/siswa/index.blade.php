@@ -65,20 +65,7 @@
                                         <i class="fas fa-edit"></i> Edit
                                     </a>
                         
-                                    <div class="dropdown-divider"></div>
-                        
-                                    <!-- Delete button with icon and form submission -->
-                                    <a href="#" class="dropdown-item"
-                                       onclick="event.preventDefault(); document.getElementById('delete-form-{{ $siswa->id }}').submit();"
-                                       data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus">
-                                        <i class="fas fa-trash-alt"></i> Hapus
-                                    </a>
-                        
-                                    <!-- Hidden delete form -->
-                                    <form id="delete-form-{{ $siswa->id }}" action="{{ route('siswa.destroy', $siswa->id) }}" method="POST" style="display:none;">
-                                        @csrf
-                                        @method('DELETE')
-                                    </form>
+                                    
                                 </div>
                             </div><!-- /btn-group -->
                         </td>

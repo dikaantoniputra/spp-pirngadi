@@ -5,7 +5,9 @@
 <meta content="Coderthemes" name="author" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <!-- App favicon -->
-<link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
+<link rel="shortcut icon" href="{{ asset('assets/images/logo-pirngadi.png') }}" height="100">
+{{-- 
+<img src="{{ asset('assets/images/logo-pirngadi.png') }}" alt="" height="150" class="mx-auto"> --}}
 
 <!-- App css -->
 
@@ -13,7 +15,7 @@
 
 <!-- icons -->
 <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
-<link rel="shortcut icon" href="assets/images/favicon.ico">
+
 
 
 

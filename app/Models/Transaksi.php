@@ -12,11 +12,7 @@ class Transaksi extends Model
     protected $guarded = [];
 
 
-    public static $rules = [
     
-        'gambar.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:55048',
-     
-    ];
 
     public function user()
     {

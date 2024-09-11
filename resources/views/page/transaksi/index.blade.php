@@ -64,15 +64,10 @@
                                 <div class="dropdown-menu">
                                     <a href="{{ route('transaksi.show', $transaksi->id) }}" class="dropdown-item"><i class="fa fa-print"></i>Cetak</a>
                                     <a class="dropdown-item" href="{{ route('transaksi.edit', $transaksi->id) }}"><i class="fas fa-edit"></i>Edit</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a href="#" class="dropdown-item"
-                                    onclick="event.preventDefault(); document.getElementById('delete-form-{{ $transaksi->id }}').submit();"
-                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus"><i class="fas fa-trash-alt"></i> Hapus</a>
-                                    <form id="delete-form-{{ $transaksi->id }}" action="{{ route('transaksi.destroy', $transaksi->id) }}" method="POST" style="display:none;">
-                                        @csrf
-                                        @method('DELETE')
-                                      </form>
-                                </div>
+                                    <a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ $transaksi->id }}"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus">
+                                         <i class="fas fa-trash-alt"></i> Hapus
+                                     </a>
                             </div><!-- /btn-group -->
                           </td>
                        
@@ -85,6 +80,32 @@
 
                     </tbody>
                 </table>
+
+                <div id="deleteModal-{{ $transaksi->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel-{{ $transaksi->id }}" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="deleteModalLabel-{{ $transaksi->id }}">Konfirmasi Hapus</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Apakah Anda yakin ingin menghapus transaksi ini? Tindakan ini tidak dapat dibatalkan.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Batal</button>
+                                <button type="button" class="btn btn-danger" onclick="event.preventDefault(); document.getElementById('delete-form-{{ $transaksi->id }}').submit();">
+                                    Hapus
+                                </button>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+                
+                <!-- Form penghapusan -->
+                <form id="delete-form-{{ $transaksi->id }}" action="{{ route('transaksi.destroy', $transaksi->id) }}" method="POST" style="display:none;">
+                    @csrf
+                    @method('DELETE')
+                </form>
             </div>
         </div>
        

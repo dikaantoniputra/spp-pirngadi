@@ -22,9 +22,6 @@ use App\Models\Tagihan;
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
 Route::get('/login', [AuthController::class, 'index'])->name('login')->middleware('guest');
@@ -46,12 +43,27 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/laporan-smp', [LaporanTransakasi::class, 'smp'])->name('laporan-smp');
         Route::get('/laporan-sma', [LaporanTransakasi::class, 'sma'])->name('laporan-sma');
 
-
         Route::get('/tabel-sma', [LaporanTransakasi::class, 'smatabel'])->name('tabel-sma');
         Route::get('/tabel-smp', [LaporanTransakasi::class, 'smptabel'])->name('tabel-smp');
         Route::get('/tabel-sd', [LaporanTransakasi::class, 'sdtabel'])->name('tabel-sd');
         Route::get('/tabel-tk', [LaporanTransakasi::class, 'tktabel'])->name('tabel-tk');
     });
+
+    // Route::group(['prefix' => 'admin', 'middleware' => 'role:admin', 'as'=>'kasir.'], function () {
+
+    //     Route::get('/', [HomeController::class, 'index'])->name('kasir.dashboard');
+
+    //     Route::resource('transaksi', TransaksiController::class);
+    //     Route::get('/laporan-tk', [LaporanTransakasi::class, 'index'])->name('laporan-tk');
+    //     Route::get('/laporan-sd', [LaporanTransakasi::class, 'sd'])->name('laporan-sd');
+    //     Route::get('/laporan-smp', [LaporanTransakasi::class, 'smp'])->name('laporan-smp');
+    //     Route::get('/laporan-sma', [LaporanTransakasi::class, 'sma'])->name('laporan-sma');
+
+    //     Route::get('/tabel-sma', [LaporanTransakasi::class, 'smatabel'])->name('tabel-sma');
+    //     Route::get('/tabel-smp', [LaporanTransakasi::class, 'smptabel'])->name('tabel-smp');
+    //     Route::get('/tabel-sd', [LaporanTransakasi::class, 'sdtabel'])->name('tabel-sd');
+    //     Route::get('/tabel-tk', [LaporanTransakasi::class, 'tktabel'])->name('tabel-tk');
+    // });
    
 });
 

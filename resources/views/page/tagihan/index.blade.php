@@ -67,20 +67,10 @@
                                         <i class="fas fa-edit"></i> Edit
                                     </a>
                         
-                                    <div class="dropdown-divider"></div>
-                        
-                                    <!-- Delete button with icon and form submission -->
-                                    <a href="#" class="dropdown-item"
-                                        onclick="event.preventDefault(); document.getElementById('delete-form-{{ $tagihan->id }}').submit();"
+                                    <a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ $tagihan->id }}"
                                         data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus">
-                                        <i class="fas fa-trash-alt"></i> Hapus
-                                    </a>
-                        
-                                    <!-- Hidden delete form -->
-                                    <form id="delete-form-{{ $tagihan->id }}" action="{{ route('tagihan.destroy', $tagihan->id) }}" method="POST" style="display:none;">
-                                        @csrf
-                                        @method('DELETE')
-                                    </form>
+                                         <i class="fas fa-trash-alt"></i> Hapus
+                                     </a>
                                 </div>
                             </div><!-- /btn-group -->
                         </td>
@@ -93,6 +83,31 @@
 
                     </tbody>
                 </table>
+                <div id="deleteModal-{{ $tagihan->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel-{{ $tagihan->id }}" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="deleteModalLabel-{{ $tagihan->id }}">Konfirmasi Hapus</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Apakah Anda yakin ingin menghapus tagihan ini? Tindakan ini tidak dapat dibatalkan.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Batal</button>
+                                <button type="button" class="btn btn-danger" onclick="event.preventDefault(); document.getElementById('delete-form-{{ $tagihan->id }}').submit();">
+                                    Hapus
+                                </button>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+                
+                <!-- Form penghapusan -->
+                <form id="delete-form-{{ $tagihan->id }}" action="{{ route('tagihan.destroy', $tagihan->id) }}" method="POST" style="display:none;">
+                    @csrf
+                    @method('DELETE')
+                </form>
             </div>
         </div>
        

@@ -41,18 +41,18 @@
   <div class="logo-box">
       <a href="#" class="logo logo-light text-center">
           <span class="logo-sm">
-              <img src="{{asset('assets/images/favicon-16x16.png')}}" alt="" height="22">
+              <img src="{{ asset('assets/images/logo-pirngadi.png') }}" alt="" height="60"> Laporan SPP
           </span>
           <span class="logo-lg">
-              <img src="{{asset('assets/images/logo-light.png')}}" alt="" height="16">
+              <img src="{{ asset('assets/images/logo-pirngadi.png') }}" alt="" height="60"> Laporan SPP
           </span>
       </a>
       <a href="#" class="logo logo-dark text-center">
           <span class="logo-sm">
-              <img src="{{asset('assets/images/favicon-16x16.png')}}" alt="" height="22">
+              <img src="{{ asset('assets/images/logo-pirngadi.png') }}" alt="" height="60">  Laporan SPP
           </span>
           <span class="logo-lg">
-              <img src="{{asset('assets/images/logo-kp-2.png')}}" alt="" height="60">
+              <img src="{{ asset('assets/images/logo-pirngadi.png') }}" alt="" height="60">  Laporan SPP
           </span>
       </a>
   </div>

@@ -38,12 +38,12 @@
                             <div class="page-title-box">
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Adminto</a></li>
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Layouts</a></li>
-                                        <li class="breadcrumb-item active">Horizontal Layout</li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Pirngadi</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">SPP</a></li>
+                                        <li class="breadcrumb-item active">Terbadu</li>
                                     </ol>
                                 </div>
-                                <h4 class="page-title">Horizontal Layout</h4>
+                                <h4 class="page-title">Laporan SPP</h4>
                             </div>
                         </div>
                     </div> 
