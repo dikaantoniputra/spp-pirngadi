@@ -4,7 +4,18 @@
     Tambah Buku Pelajaran
 @endsection
 
+
 @push('after-style')
+
+<link href="{{ asset('') }}assets/libs/mohithg-switchery/switchery.min.css" rel="stylesheet" type="text/css" />
+<link href="{{ asset('') }}assets/libs/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
+<link href="{{ asset('') }}assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+<link href="{{ asset('') }}assets/libs/selectize/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css" />
+<link href="{{ asset('') }}assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
+<link href="{{ asset('') }}assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-style" />
+
+		<!-- icons -->
+<link href="{{ asset('') }}assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 @endpush
 
 @section('content')
@@ -12,9 +23,9 @@
         <div class="col-md-12 col-lg-12">
             <div class="card">
                 <div class="card-body">
-                    <form method="POST" action="{{ route('user.store') }}" id="form">
+                    <form method="POST" action="{{ route('tagihan.store') }}" id="form">
                         @csrf
-                        @include('page.user.form')
+                        @include('page.tagihan.form')
                     </form>
                 </div>
             </div>
@@ -23,132 +34,25 @@
 @endsection
 
 @push('after-script')
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script>
-        
-        function toggleRS() {
-    var divDaerah = document.getElementById("div-daerah");
-    var divRs = document.getElementById("div-rs");
+<script src="{{ asset('') }}assets/libs/jquery/jquery.min.js"></script>
+<script src="{{ asset('') }}assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{ asset('') }}assets/libs/simplebar/simplebar.min.js"></script>
+<script src="{{ asset('') }}assets/libs/node-waves/waves.min.js"></script>
+<script src="{{ asset('') }}assets/libs/waypoints/lib/jquery.waypoints.min.js"></script>
+<script src="{{ asset('') }}assets/libs/jquery.counterup/jquery.counterup.min.js"></script>
+<script src="{{ asset('') }}assets/libs/feather-icons/feather.min.js"></script>
 
-    divDaerah.style.display = "none";
-    divRs.style.display = "";
+<script src="{{ asset('') }}assets/libs/selectize/js/standalone/selectize.min.js"></script>
+<script src="{{ asset('') }}assets/libs/mohithg-switchery/switchery.min.js"></script>
+<script src="{{ asset('') }}/libs/multiselect/js/jquery.multi-select.js"></script>
+<script src="{{ asset('') }}assets/libs/select2/js/select2.min.js"></script>
+<script src="{{ asset('') }}assets/libs/jquery-mockjax/jquery.mockjax.min.js"></script>
+<script src="{{ asset('') }}assets/libs/devbridge-autocomplete/jquery.autocomplete.min.js"></script>
+<script src="{{ asset('') }}assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+<script src="{{ asset('') }}assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
 
-    var selectRs = document.getElementById("role");
-    selectRs.setAttribute("size", "3");
+<script src="{{ asset('') }}assets/js/pages/form-advanced.init.js"></script>
 
-    var selectDaerah = document.getElementById("regency");
-    selectDaerah.setAttribute("size", "1");
-
-    // Re-init the Select2 plugin for the element
-    $(selectRs).select2();
-}
-
-function toggleDaerah() {
-    var divDaerah = document.getElementById("div-daerah");
-    var divRs = document.getElementById("div-rs");
-
-    divRs.style.display = "none";
-    divDaerah.style.display = "";
-
-    var selectRs = document.getElementById("role");
-    selectRs.setAttribute("size", "1");
-
-    var selectDaerah = document.getElementById("regency");
-    selectDaerah.setAttribute("size", "3");
-
-    // Re-init the Select2 plugin for the element
-    $(selectDaerah).select2();
-}
-
-function toggleBpjs() {
-    var divDaerah = document.getElementById("div-daerah");
-    var divRs = document.getElementById("div-rs");
-
-    divRs.style.display = "none";
-    divDaerah.style.display = "none";
-
-    var selectRs = document.getElementById("role");
-    selectRs.setAttribute("size", "1");
-
-    var selectDaerah = document.getElementById("regency");
-    selectDaerah.setAttribute("size", "3");
-
-    // Re-init the Select2 plugin for the element
-    $(selectDaerah).select2();
-}
-    </script>
-
-        <script type="text/javascript">
-            var passwordInput = document.getElementById('password');
-            var togglePasswordBtn = document.getElementById('btn-toggle-password');
-        
-            togglePasswordBtn.addEventListener('click', function() {
-                if (passwordInput.type === 'password') {
-                    passwordInput.type = 'text';
-                    togglePasswordBtn.innerHTML = '<i class="far fa-eye-slash"></i>';
-                } else {
-                    passwordInput.type = 'password';
-                    togglePasswordBtn.innerHTML = '<i class="far fa-eye"></i>';
-                }
-            });
-        </script>
-
-
-    <script>
-        // $("select").select2({
-        //     tags: "true",
-        //     placeholder: "Pilih Role",
-        //     allowClear: true
-        // });
-
-
-
-
-        // $(document).ready(function() {
-        //   $('#form').on('submit', function(e) {
-        //     e.preventDefault();
-
-        //     var username = $('#username').val();
-        //     var email = $('#email').val();
-        //     var wa = $('#wa').val();
-
-        //     $.ajax({
-        //       url: '/validate-form',
-        //       method: 'POST',
-        //       data: {
-        //         username: username,
-        //         email: email,
-        //         wa: wa
-        //       },
-        //       dataType: 'json',
-        //       success: function(response) {
-        //         // Jika validasi sukses, submit form
-        //         $('#form').unbind('submit').submit();
-        //       },
-        //       error: function(xhr) {
-        //         var errors = xhr.responseJSON.errors;
-
-        //         // Menampilkan pesan error pada masing-masing input field
-        //         if (errors.username) {
-        //           $('#username-error').html(errors.username[0]);
-        //         }
-        //         if (errors.email) {
-        //           $('#email-error').html(errors.email[0]);
-        //         }
-        //         if (errors.wa) {
-        //           $('#wa-error').html(errors.wa[0]);
-        //         }
-        //       }
-        //     });
-        //   });
-        // });
-    </script>
-
-    <script>
-        $('#akun_rs').click(function(e) {
-            e.preventDefault();
-
-        });
-    </script>
+<!-- App js -->
+<script src="{{ asset('') }}assets/js/app.min.js"></script>
 @endpush

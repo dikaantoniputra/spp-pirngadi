@@ -23,7 +23,7 @@
                 <label for="hori-pass1" class="col-4 col-form-label">Password<span class="text-danger"> *</span></label>
                 <div class="col-7">
                     <div class="input-group">
-                        <input id="password" name="password" type="password" placeholder="Password" required class="form-control" value="" />
+                        <input id="password" name="password" type="password" placeholder="Password" class="form-control" value="" />
                         <button class="btn btn-outline-secondary" type="button" id="btn-toggle-password"><i class="far fa-eye"></i></button>
                     </div>  
                 </div>
@@ -85,12 +85,12 @@
                 <div class="col-7">
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="status" id="inlineRadio1"
-                            value="1" <?php echo (isset($user) && $user->status === '0') ? 'checked' : ''; ?> >
+                            value="0" <?php echo (isset($user) && $user->status === '0') ? 'checked' : ''; ?> >
                         <label class="form-check-label" for="inlineRadio1">Aktif</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="status" id="inlineRadio2"
-                            value="0" <?php echo (isset($user) && $user->status === '1') ? 'checked' : ''; ?> >
+                            value="1" <?php echo (isset($user) && $user->status === '1') ? 'checked' : ''; ?> >
                         <label class="form-check-label" for="inlineRadio2">Non Aktif</label>
                     </div>
                 </div>

@@ -1,125 +1,84 @@
 <div class="col-xl-12">
     <div class="card">
-        <h2 class="header-title">Tambah User</h2>
+        <h2 class="header-title">Tambah Tagihan</h2>
         <div class="card-body">
+
             <div class="row mb-3">
-                <label for="inputEmail3" class="col-4 col-form-label">Name<span class="text-danger"> *</span></label>
+                <label for="hori-pass1" class="col-4 col-form-label">Nama Siswa<span class="text-danger"> *</span></label>
                 <div class="col-7">
-                    <input type="number" required parsley-type="email" class="form-control" id="nik"
-                        name="Name" placeholder="Name" value="{{ $user->name ?? '' }}" />
-                   
-                </div>
+                    <select class="form-control" data-toggle="select2" data-width="100%" name="siswa_id">
+                        <option>Cari</option>
+                        @foreach($siswa as $kat)
+                          <option value="{{ $kat->id }}" {{ isset($tagihansiswa) && $kat->id == $tagihansiswa->siswa_id ? 'selected' : '' }}>
+                              {{ $kat->name }}
+                          </option>
+                        @endforeach
+                    </select>
+                  
+                </div> <!-- end col -->
             </div>
 
             <div class="row mb-3">
-                <label for="inputEmail3" class="col-4 col-form-label">UserName<span class="text-danger"> *</span></label>
-                <div class="col-7">
-                    <input type="text" required parsley-type="email" class="form-control" id="name"
-                        name="username" placeholder="Username" value="{{ $user->name ?? '' }}" />
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <label for="hori-pass1" class="col-4 col-form-label">Password<span class="text-danger"> *</span></label>
+                <label for="hori-pass1" class="col-4 col-form-label">Tgl Pembuatan VA<span class="text-danger"> *</span></label>
                 <div class="col-7">
                     <div class="input-group">
-                        <input id="password" name="password" type="password" placeholder="Password" required class="form-control" value="{{ $user->password ?? '' }}" />
-                        <button class="btn btn-outline-secondary" type="button" id="btn-toggle-password"><i class="far fa-eye"></i></button>
-                    </div>  
+                        <input name="va_creation_date" type="datetime-local" placeholder="Nominal" required class="form-control" value="{{ $tagihansiswa->va_creation_date ?? '' }}" />
+                    </div>
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label for="inputEmail3" class="col-4 col-form-label">Kategori<span class="text-danger">
-                        *</span></label>
+                <label for="hori-pass1" class="col-4 col-form-label">Tgl Berakir VA<span class="text-danger"> *</span></label>
                 <div class="col-7">
-                    <select class="form-select">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
+                    <div class="input-group">
+                        <input name="va_expiry_date" type="datetime-local" placeholder="Nominal" required class="form-control" value="{{ $tagihansiswa->va_expiry_date ?? '' }}" />
+                    </div>
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label for="inputEmail3" class="col-4 col-form-label">Kelas<span class="text-danger">
-                        *</span></label>
+                <label for="hori-pass1" class="col-4 col-form-label">Spp tiap bulan<span class="text-danger"> *</span></label>
                 <div class="col-7">
-                    <select class="form-select">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
+                    <div class="input-group">
+                        <input name="spp_tiap_bulan" type="number" placeholder="Nominal" required class="form-control" value="{{ $tagihansiswa->spp_tiap_bulan ?? ''}}" />
+                    </div>
                 </div>
             </div>
 
-            
-
-          
-
-            
-
-       
             <div class="row mb-3">
-                <label for="hori-pass2" class="col-4 col-form-label">Jenis Akun <span class="text-danger">*</span></label>
+                <label for="hori-pass1" class="col-4 col-form-label">Jumlah Harus Yang Harus Di Bayar<span class="text-danger"> *</span></label>
                 <div class="col-7">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                            value="rs" <?php echo (isset($user) && $user->role === 'rs') ? 'checked' : ''; ?> onclick="toggleRS()">
-                        <label class="form-check-label" for="inlineRadio1">Guru</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                            value="sub-rs" <?php echo (isset($user) && $user->role === 'sub-rs') ? 'checked' : ''; ?> onclick="toggleRS()">
-                        <label class="form-check-label" for="inlineRadio2">Kepala Sekolah</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                            value="daerah" <?php echo (isset($user) && $user->role === 'daerah') ? 'checked' : ''; ?> onclick="toggleDaerah()">
-                        <label class="form-check-label" for="inlineRadio3">Staf</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
-                            value="sub-daerah" <?php echo (isset($user) && $user->role === 'sub-daerah') ? 'checked' : ''; ?> onclick="toggleDaerah()">
-                        <label class="form-check-label" for="inlineRadio4">Karyawan</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5"
-                            value="province" disabled>
-                        <label class="form-check-label" for="inlineRadio5">(Admin Provinsi)</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6"
-                            value="bpjs" <?php echo (isset($user) && $user->role === 'bpjs') ? 'checked' : ''; ?> onclick="toggleBpjs()">
-                        <label class="form-check-label" for="inlineRadio6">BPJS</label>
+                    <div class="input-group">
+                        <input name="billing_amount" type="number" placeholder="Nominal" required class="form-control" value="{{ $tagihansiswa->billing_amount ?? '' }}" />
                     </div>
                 </div>
             </div>
+
             
-            
-
-
-
-           
+            <div class="row mb-3">
+                <label for="hori-pass1" class="col-4 col-form-label">Deskripsi<span class="text-danger"> *</span></label>
+                <div class="col-7">
+                    <div class="input-group">
+                        <input name="description" type="text" placeholder="Deskripsi" required class="form-control" value="{{ $tagihansiswa->description ?? '' }}" />
+                    </div>
+                </div>
+            </div>
 
             <div class="row mb-3">
-                <label for="hori-pass2" class="col-4 col-form-label">Status Akun <span class="text-danger">*</span></label>
+                <label for="hori-pass2" class="col-4 col-form-label">Status Tagihan <span class="text-danger">*</span></label>
                 <div class="col-7">
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="status" id="inlineRadio1"
-                            value="1" <?php echo (isset($user) && $user->status === '1') ? 'checked' : ''; ?> >
-                        <label class="form-check-label" for="inlineRadio1">Aktif</label>
+                            value="Active" <?php echo (isset($tagihansiswa) && $tagihansiswa->status === 'Active') ? 'checked' : ''; ?> >
+                        <label class="form-check-label" for="inlineRadio1">Active</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="status" id="inlineRadio2"
-                            value="0" <?php echo (isset($user) && $user->status === '0') ? 'checked' : ''; ?> >
-                        <label class="form-check-label" for="inlineRadio2">Non Aktif</label>
+                            value="Non Active" <?php echo (isset($tagihansiswa) && $tagihansiswa->status === 'Non Active') ? 'checked' : ''; ?> >
+                        <label class="form-check-label" for="inlineRadio2">Non Active</label>
                     </div>
                 </div>
             </div>
-            
 
             <div class="row mb-3">
                 <div class="col-8 offset-4">

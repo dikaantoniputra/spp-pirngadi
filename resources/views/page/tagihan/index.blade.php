@@ -19,7 +19,7 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="mt-0 header-title">Tambah tagihan</h4>
-                <a type="submit" href="{{ route('user.create') }}"
+                <a type="submit" href="{{ route('tagihan.create') }}"
                         class="btn btn-primary waves-effect waves-light mb-4">Tambah
                         tagihan</a>
 
@@ -49,31 +49,42 @@
                         <td>{{ $tagihan->billing_amount }}</td>
                         <td>{{ $tagihan->description }}</td>
                         <td>
-                            @if($tagihan->status == 0)
-                                Aktif
-                            @elseif($tagihan->status == 1)
-                                Non Aktif
-                            @elseif($tagihan->status == 3)
-                                Menunggu Verifikasi
-                            @else
-                                
-                            @endif
+                            {{ $tagihan->status }}
                         </td>
                         <td>
-                            <div class="table-actions d-flex align-items-center gap-2 fs-6">
-                              <a href="{{ route('user.show', $tagihan->id) }}" class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Views"><i class="bi bi-eye-fill"></i></a>
-                              <a href="{{ route('user.edit', $tagihan->id) }}" class="text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><i class="bi bi-pencil-fill"></i></a>
-                              <a href="#" class="text-danger" onclick="event.preventDefault(); document.getElementById('delete-form-{{ $tagihan->id }}').submit();" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus">
-                                <i class="bi bi-trash-fill"></i>
-                              </a>
-                              <form id="delete-form-{{ $tagihan->id }}" action="{{ route('user.destroy', $tagihan->id) }}" method="POST" style="display:none;">
-                                @csrf
-                                @method('DELETE')
-                              </form>
-                            </div>
-                          </td>
-                       
-                    </tr>
+                            <div class="btn-group mb-2">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Action <i class="mdi mdi-chevron-down"></i>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <!-- View button with icon -->
+                                    <a class="dropdown-item" href="{{ route('tagihan.show', $tagihan->id) }}">
+                                        <i class="fas fa-eye"></i> View
+                                    </a>
+                        
+                                    <!-- Edit button with icon -->
+                                    <a class="dropdown-item" href="{{ route('tagihan.edit', $tagihan->id) }}">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </a>
+                        
+                                    <div class="dropdown-divider"></div>
+                        
+                                    <!-- Delete button with icon and form submission -->
+                                    <a href="#" class="dropdown-item"
+                                        onclick="event.preventDefault(); document.getElementById('delete-form-{{ $tagihan->id }}').submit();"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus">
+                                        <i class="fas fa-trash-alt"></i> Hapus
+                                    </a>
+                        
+                                    <!-- Hidden delete form -->
+                                    <form id="delete-form-{{ $tagihan->id }}" action="{{ route('tagihan.destroy', $tagihan->id) }}" method="POST" style="display:none;">
+                                        @csrf
+                                        @method('DELETE')
+                                    </form>
+                                </div>
+                            </div><!-- /btn-group -->
+                        </td>
+                        
                     @empty
                         <div>
                             Data Kosong

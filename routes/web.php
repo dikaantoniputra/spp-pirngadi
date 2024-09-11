@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LaporanTransakasi;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\TagihanController;
 use App\Http\Controllers\TransaksiController;
@@ -33,17 +34,25 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::group(['middleware' => ['auth']], function () {
 
     Route::group(['prefix' => 'admin', 'middleware' => 'role:admin'], function () {
-        // Route::get('/', function () {
-        //     return view('page.index');
-        // })->name('admin.dashboard');
 
         Route::get('/', [HomeController::class, 'index'])->name('admin.dashboard');
 
         Route::resource('user', UserController::class);
         Route::resource('siswa', SiswaController::class);
+        Route::resource('tagihan', TagihanController::class);
+        Route::resource('transaksi', TransaksiController::class);
+        Route::get('/laporan-tk', [LaporanTransakasi::class, 'index'])->name('laporan-tk');
+        Route::get('/laporan-sd', [LaporanTransakasi::class, 'sd'])->name('laporan-sd');
+        Route::get('/laporan-smp', [LaporanTransakasi::class, 'smp'])->name('laporan-smp');
+        Route::get('/laporan-sma', [LaporanTransakasi::class, 'sma'])->name('laporan-sma');
+
+
+        Route::get('/tabel-sma', [LaporanTransakasi::class, 'smatabel'])->name('tabel-sma');
+        Route::get('/tabel-smp', [LaporanTransakasi::class, 'smptabel'])->name('tabel-smp');
+        Route::get('/tabel-sd', [LaporanTransakasi::class, 'sdtabel'])->name('tabel-sd');
+        Route::get('/tabel-tk', [LaporanTransakasi::class, 'tktabel'])->name('tabel-tk');
     });
-    Route::resource('transaksi', TransaksiController::class);
-    Route::resource('tagihan', TagihanController::class);
+   
 });
 
 Route::get('/', function () {

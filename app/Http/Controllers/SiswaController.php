@@ -133,9 +133,9 @@ class SiswaController extends Controller
      */
     public function destroy($id)
     {
-        $Berita = Siswa::find($id);
-        if ($Berita) {
-            $Berita->delete();
+        $siswa = Siswa::find($id);
+        if ($siswa) {
+            $siswa->delete();
             return redirect()->back()->withInput()->with('success', 'Kegiatan Berhasil Di Tambahkan.');
         } else {
             return redirect()->back()->withInput()->with('success', 'Kegiatan Berhasil Di Tambahkan.');

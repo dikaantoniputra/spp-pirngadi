@@ -58,37 +58,38 @@
                                     </td>
                                     <td>
                                         <div class="btn-group mb-2">
-                                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <i class="mdi mdi-chevron-down"></i></button>
+                                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Action <i class="mdi mdi-chevron-down"></i>
+                                            </button>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="{{ route('user.show', $user->id) }}">View</a>
-                                                <a class="dropdown-item" href="{{ route('user.edit', $user->id) }}">Edit</a>
-                                               
+                                                <!-- View button with icon -->
+                                                <a class="dropdown-item" href="{{ route('user.show', $user->id) }}">
+                                                    <i class="fas fa-eye"></i> View
+                                                </a>
+                                    
+                                                <!-- Edit button with icon -->
+                                                <a class="dropdown-item" href="{{ route('user.edit', $user->id) }}">
+                                                    <i class="fas fa-edit"></i> Edit
+                                                </a>
+                                    
                                                 <div class="dropdown-divider"></div>
+                                    
+                                                <!-- Delete button with icon and form submission -->
                                                 <a href="#" class="dropdown-item"
-                                                onclick="event.preventDefault(); document.getElementById('delete-form-{{ $user->id }}').submit();"
-                                                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus">Hapus</a>
+                                                   onclick="event.preventDefault(); document.getElementById('delete-form-{{ $user->id }}').submit();"
+                                                   data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus">
+                                                    <i class="fas fa-trash-alt"></i> Hapus
+                                                </a>
+                                    
+                                                <!-- Hidden delete form -->
+                                                <form id="delete-form-{{ $user->id }}" action="{{ route('user.destroy', $user->id) }}" method="POST" style="display:none;">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                </form>
                                             </div>
-                                        </div><!-- /btn-group -->
-                                        {{-- <div class="table-actions d-flex align-items-center gap-2 fs-6">
-                                            <a href="{{ route('user.show', $user->id) }}" class="text-primary"
-                                                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Views"><i
-                                                    class="bi bi-eye-fill"></i></a>
-                                            <a href="{{ route('user.edit', $user->id) }}" class="text-warning"
-                                                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><i
-                                                    class="bi bi-pencil-fill"></i></a>
-                                            <a href="#" class="text-danger"
-                                                onclick="event.preventDefault(); document.getElementById('delete-form-{{ $user->id }}').submit();"
-                                                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus">
-                                                <i class="bi bi-trash-fill"></i>
-                                            </a>
-                                            <form id="delete-form-{{ $user->id }}"
-                                                action="{{ route('user.destroy', $user->id) }}" method="POST"
-                                                style="display:none;">
-                                                @csrf
-                                                @method('DELETE')
-                                            </form>
-                                        </div> --}}
+                                        </div>
                                     </td>
+                                    
 
                                 </tr>
                             @empty

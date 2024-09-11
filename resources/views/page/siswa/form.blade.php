@@ -110,10 +110,18 @@
                 <div class="col-7">
                     <select class="form-select" name="kelas" id="kelas">
                         <option disabled {{ old('kelas', $user->kelas ?? '') == '' ? 'selected' : '' }}>Open this select menu</option>
+                    
+                        <!-- Options for numbers 1 to 12 -->
                         @for ($i = 1; $i <= 12; $i++)
                             <option value="{{ $i }}" {{ old('kelas', $user->kelas ?? '') == $i ? 'selected' : '' }}>{{ $i }}</option>
                         @endfor
+                    
+                        <!-- Additional options A, B, KB -->
+                        <option value="a" {{ old('kelas', $user->kelas ?? '') == 'a' ? 'selected' : '' }}>A</option>
+                        <option value="b" {{ old('kelas', $user->kelas ?? '') == 'b' ? 'selected' : '' }}>B</option>
+                        <option value="kb" {{ old('kelas', $user->kelas ?? '') == 'kb' ? 'selected' : '' }}>KB</option>
                     </select>
+                    
                 </div>
             </div>
             

@@ -51,22 +51,38 @@
                         <td>{{ $siswa->status }}</td>
                         <td>
                             <div class="btn-group mb-2">
-                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <i class="mdi mdi-chevron-down"></i></button>
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Action <i class="mdi mdi-chevron-down"></i>
+                                </button>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="{{ route('siswa.show', $siswa->id) }}">View</a>
-                                    <a class="dropdown-item" href="{{ route('siswa.edit', $siswa->id) }}">Edit</a>
-                                   
+                                    <!-- View button with icon -->
+                                    <a class="dropdown-item" href="{{ route('siswa.show', $siswa->id) }}">
+                                        <i class="fas fa-eye"></i> View
+                                    </a>
+                        
+                                    <!-- Edit button with icon -->
+                                    <a class="dropdown-item" href="{{ route('siswa.edit', $siswa->id) }}">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </a>
+                        
                                     <div class="dropdown-divider"></div>
+                        
+                                    <!-- Delete button with icon and form submission -->
                                     <a href="#" class="dropdown-item"
-                                    onclick="event.preventDefault(); document.getElementById('delete-form-{{ $siswa->id }}').submit();"
-                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus">Hapus</a>
+                                       onclick="event.preventDefault(); document.getElementById('delete-form-{{ $siswa->id }}').submit();"
+                                       data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus">
+                                        <i class="fas fa-trash-alt"></i> Hapus
+                                    </a>
+                        
+                                    <!-- Hidden delete form -->
                                     <form id="delete-form-{{ $siswa->id }}" action="{{ route('siswa.destroy', $siswa->id) }}" method="POST" style="display:none;">
                                         @csrf
                                         @method('DELETE')
-                                      </form>
+                                    </form>
                                 </div>
                             </div><!-- /btn-group -->
-                          </td>
+                        </td>
+                        
                        
                     </tr>
                     @empty

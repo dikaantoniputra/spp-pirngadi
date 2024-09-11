@@ -13,10 +13,10 @@ Tambah Buku Pelajaran
     <div class="col-md-12 col-lg-12">
         <div class="card">
             <div class="card-body">
-                <form method="POST" action="{{ route('user.update' , $user) }}" id="form" >
+                <form method="POST" action="{{ route('tagihan.update' , $tagihansiswa) }}" id="form" >
                     @csrf
                     @method('PUT')
-                    @include('page.user.form')
+                    @include('page.tagihan.form')
                 </form>
             </div>
         </div>

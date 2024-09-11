@@ -67,7 +67,7 @@
                     <div class="widget-detail-2 text-end">
                         <span class="badge bg-success rounded-pill float-start mt-3">32% <i class="mdi mdi-trending-up"></i> </span>
                         <h2 class="fw-normal mb-1">Rp.{{ number_format($totalNominalBayarSMA, 0, ',', '.') }} </h2>
-                        <p class="text-muted mb-3">Revenue today</p>
+                        <p class="text-muted mb-3">Nominal </p>
                     </div>
                     <div class="progress progress-bar-alt-success progress-sm">
                         <div class="progress-bar bg-success" role="progressbar"
@@ -100,18 +100,20 @@
                     </div>
                 </div>
 
-                <h4 class="header-title mt-0 mb-4">Statistics</h4>
+                <h4 class="header-title mt-0 mb-3">Pendapatan SMA</h4>
 
-                <div class="widget-chart-1">
-                    <div class="widget-chart-box-1 float-start" dir="ltr">
-                        <input data-plugin="knob" data-width="70" data-height="70" data-fgColor="#ffbd4a"
-                                data-bgColor="#FFE6BA" value="58"
-                                data-skin="tron" data-angleOffset="180" data-readOnly=true
-                                data-thickness=".15"/>
+                <div class="widget-box-2">
+                    <div class="widget-detail-2 text-end">
+                        <span class="badge bg-success rounded-pill float-start mt-3">32% <i class="mdi mdi-trending-up"></i> </span>
+                        <h2 class="fw-normal mb-1">Rp.{{ number_format($totalNominalBayarSMA, 0, ',', '.') }} </h2>
+                        <p class="text-muted mb-3">Nominal </p>
                     </div>
-                    <div class="widget-detail-1 text-end">
-                        <h2 class="fw-normal pt-2 mb-1"> 4569 </h2>
-                        <p class="text-muted mb-1">Revenue today</p>
+                    <div class="progress progress-bar-alt-success progress-sm">
+                        <div class="progress-bar bg-success" role="progressbar"
+                                aria-valuenow="77" aria-valuemin="0" aria-valuemax="100"
+                                style="width: 77%;">
+                            <span class="visually-hidden">77% Complete</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -137,16 +139,16 @@
                     </div>
                 </div>
 
-                <h4 class="header-title mt-0 mb-3">Daily Sales</h4>
+                <h4 class="header-title mt-0 mb-3">Pendapatan SMA</h4>
 
                 <div class="widget-box-2">
                     <div class="widget-detail-2 text-end">
-                        <span class="badge bg-pink rounded-pill float-start mt-3">32% <i class="mdi mdi-trending-up"></i> </span>
-                        <h2 class="fw-normal mb-1"> 158 </h2>
-                        <p class="text-muted mb-3">Revenue today</p>
+                        <span class="badge bg-success rounded-pill float-start mt-3">32% <i class="mdi mdi-trending-up"></i> </span>
+                        <h2 class="fw-normal mb-1">Rp.{{ number_format($totalNominalBayarSMA, 0, ',', '.') }} </h2>
+                        <p class="text-muted mb-3">Nominal </p>
                     </div>
-                    <div class="progress progress-bar-alt-pink progress-sm">
-                        <div class="progress-bar bg-pink" role="progressbar"
+                    <div class="progress progress-bar-alt-success progress-sm">
+                        <div class="progress-bar bg-success" role="progressbar"
                                 aria-valuenow="77" aria-valuemin="0" aria-valuemax="100"
                                 style="width: 77%;">
                             <span class="visually-hidden">77% Complete</span>
@@ -155,7 +157,6 @@
                 </div>
             </div>
         </div>
-        
     </div><!-- end col -->
 
 </div>
