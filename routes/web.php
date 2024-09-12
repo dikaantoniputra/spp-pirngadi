@@ -7,6 +7,7 @@ use App\Http\Controllers\LaporanTransakasi;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\TagihanController;
 use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\TuSmaController;
 use App\Http\Controllers\UserController;
 use App\Models\Tagihan;
 
@@ -49,21 +50,16 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/tabel-tk', [LaporanTransakasi::class, 'tktabel'])->name('tabel-tk');
     });
 
-    // Route::group(['prefix' => 'admin', 'middleware' => 'role:admin', 'as'=>'kasir.'], function () {
+    Route::group(['prefix' => 'kepala-unit-sma', 'middleware' => 'role:kepala-unit-sma', 'as'=>'sma.'], function () {
 
-    //     Route::get('/', [HomeController::class, 'index'])->name('kasir.dashboard');
-
-    //     Route::resource('transaksi', TransaksiController::class);
-    //     Route::get('/laporan-tk', [LaporanTransakasi::class, 'index'])->name('laporan-tk');
-    //     Route::get('/laporan-sd', [LaporanTransakasi::class, 'sd'])->name('laporan-sd');
-    //     Route::get('/laporan-smp', [LaporanTransakasi::class, 'smp'])->name('laporan-smp');
-    //     Route::get('/laporan-sma', [LaporanTransakasi::class, 'sma'])->name('laporan-sma');
-
-    //     Route::get('/tabel-sma', [LaporanTransakasi::class, 'smatabel'])->name('tabel-sma');
-    //     Route::get('/tabel-smp', [LaporanTransakasi::class, 'smptabel'])->name('tabel-smp');
-    //     Route::get('/tabel-sd', [LaporanTransakasi::class, 'sdtabel'])->name('tabel-sd');
-    //     Route::get('/tabel-tk', [LaporanTransakasi::class, 'tktabel'])->name('tabel-tk');
-    // });
+        Route::get('/', [TuSmaController::class, 'index'])->name('admin.dashboard');
+        Route::get('/siswa', [TuSmaController::class, 'siswa'])->name('siswa');
+        Route::get('/tabel-sma', [TuSmaController::class, 'smatabel'])->name('tabel-sma');
+        Route::get('/kelas-10', [TuSmaController::class, 'kelas10'])->name('kelas.10');
+        Route::get('/kelas-11', [TuSmaController::class, 'kelas11'])->name('kelas.11');
+        Route::get('/kelas-12', [TuSmaController::class, 'kelas12'])->name('kelas.12');
+       
+    });
    
 });
 
