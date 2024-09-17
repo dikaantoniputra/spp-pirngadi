@@ -27,12 +27,11 @@
                         <tr>
                             <th>No</th>
                             <th>Siswa</th>
-                            <th>Spp Bulanan</th>
-                            <th>SPP/TH</th>
+                         
                             @foreach(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'] as $month)
                                 <th>{{ $month }}</th>
                             @endforeach
-                            <th>Tunggakan</th>
+                      
                         </tr>
                     </thead>
                     <tbody>
@@ -40,19 +39,8 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $siswa->siswa->name ?? '' }}</td>
-                            <td>{{ $siswa->siswa->spp_tiap_bulan ?? '' }}</td>
+                          
                             
-                            <td>{{ $siswa->siswa->billing_amount ?? '' }}</td>
-    
-                                @php
-                                    // Calculate the total amount paid across all months
-                                    $totalPaid = 0;
-                                    foreach(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'] as $month) {
-                                        $totalPaid += $siswa->monthlyTotals[$month] ?? 0;
-                                    }
-                                    // Calculate remaining billing amount
-                                    $remainingAmount = ($siswa->siswa->billing_amount ?? 0) - $totalPaid;
-                                @endphp
 
                                 <!-- Display the monthly totals -->
                                 @foreach(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'] as $month)
@@ -60,7 +48,7 @@
                                 @endforeach
 
                                 <!-- New <td> for the billing amount minus the total amount paid -->
-                            <td>{{ number_format($remainingAmount, 0, ',', '.') }}</td>
+                            
                         </tr>
                         @empty
                         <tr>
@@ -85,12 +73,11 @@
                         <tr>
                             <th>No</th>
                             <th>Siswa</th>
-                            <th>Spp Bulanan</th>
-                            <th>SPP/TH</th>
+                         
                             @foreach(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'] as $month)
                                 <th>{{ $month }}</th>
                             @endforeach
-                            <th>Tunggakan</th>
+                      
                         </tr>
                     </thead>
                     <tbody>
@@ -98,18 +85,9 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $siswa->siswa->name ?? '' }}</td>
-                            <td>{{ $siswa->siswa->spp_tiap_bulan ?? '' }}</td>
-                            <td>{{ $siswa->siswa->billing_amount ?? '' }}</td>
+                        
     
-                                @php
-                                    // Calculate the total amount paid across all months
-                                    $totalPaid = 0;
-                                    foreach(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'] as $month) {
-                                        $totalPaid += $siswa->monthlyTotals[$month] ?? 0;
-                                    }
-                                    // Calculate remaining billing amount
-                                    $remainingAmount = ($siswa->siswa->billing_amount ?? 0) - $totalPaid;
-                                @endphp
+                            
 
                                 <!-- Display the monthly totals -->
                                 @foreach(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'] as $month)
@@ -117,7 +95,7 @@
                                 @endforeach
 
                                 <!-- New <td> for the billing amount minus the total amount paid -->
-                            <td>{{ number_format($remainingAmount, 0, ',', '.') }}</td>
+                            
                             
                         </tr>
                         @empty
@@ -143,12 +121,11 @@
                         <tr>
                             <th>No</th>
                             <th>Siswa</th>
-                            <th>Spp Bulanan</th>
-                            <th>SPP/TH</th>
+                         
                             @foreach(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'] as $month)
                                 <th>{{ $month }}</th>
                             @endforeach
-                            <th>Tunggakan</th>
+                      
                         </tr>
                     </thead>
                     <tbody>
@@ -156,18 +133,9 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $siswa->siswa->name ?? '' }}</td>
-                            <td>{{ $siswa->siswa->spp_tiap_bulan ?? '' }}</td>
-                            <td>{{ $siswa->siswa->billing_amount ?? '' }}</td>
+                        
     
-                                @php
-                                    // Calculate the total amount paid across all months
-                                    $totalPaid = 0;
-                                    foreach(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'] as $month) {
-                                        $totalPaid += $siswa->monthlyTotals[$month] ?? 0;
-                                    }
-                                    // Calculate remaining billing amount
-                                    $remainingAmount = ($siswa->siswa->billing_amount ?? 0) - $totalPaid;
-                                @endphp
+                            
 
                                 <!-- Display the monthly totals -->
                                 @foreach(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'] as $month)
@@ -175,7 +143,7 @@
                                 @endforeach
 
                                 <!-- New <td> for the billing amount minus the total amount paid -->
-                            <td>{{ number_format($remainingAmount, 0, ',', '.') }}</td>
+                            
                         </tr>
                         @empty
                         <tr>
@@ -200,12 +168,11 @@
                         <tr>
                             <th>No</th>
                             <th>Siswa</th>
-                            <th>Spp Bulanan</th>
-                            <th>SPP/TH</th>
+                         
                             @foreach(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'] as $month)
                                 <th>{{ $month }}</th>
                             @endforeach
-                            <th>Tunggakan</th>
+                      
                         </tr>
                     </thead>
                     <tbody>
@@ -213,18 +180,9 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $siswa->siswa->name ?? '' }}</td>
-                            <td>{{ $siswa->siswa->spp_tiap_bulan ?? '' }}</td>
-                            <td>{{ $siswa->siswa->billing_amount ?? '' }}</td>
+                        
     
-                                @php
-                                    // Calculate the total amount paid across all months
-                                    $totalPaid = 0;
-                                    foreach(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'] as $month) {
-                                        $totalPaid += $siswa->monthlyTotals[$month] ?? 0;
-                                    }
-                                    // Calculate remaining billing amount
-                                    $remainingAmount = ($siswa->siswa->billing_amount ?? 0) - $totalPaid;
-                                @endphp
+                            
 
                                 <!-- Display the monthly totals -->
                                 @foreach(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'] as $month)
@@ -232,7 +190,7 @@
                                 @endforeach
 
                                 <!-- New <td> for the billing amount minus the total amount paid -->
-                            <td>{{ number_format($remainingAmount, 0, ',', '.') }}</td>
+                            
                         </tr>
                         @empty
                         <tr>
@@ -257,12 +215,11 @@
                         <tr>
                             <th>No</th>
                             <th>Siswa</th>
-                            <th>Spp Bulanan</th>
-                            <th>SPP/TH</th>
+                         
                             @foreach(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'] as $month)
                                 <th>{{ $month }}</th>
                             @endforeach
-                            <th>Tunggakan</th>
+                      
                         </tr>
                     </thead>
                     <tbody>
@@ -270,18 +227,9 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $siswa->siswa->name ?? '' }}</td>
-                            <td>{{ $siswa->siswa->spp_tiap_bulan ?? '' }}</td>
-                            <td>{{ $siswa->siswa->billing_amount ?? '' }}</td>
+                        
     
-                                @php
-                                    // Calculate the total amount paid across all months
-                                    $totalPaid = 0;
-                                    foreach(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'] as $month) {
-                                        $totalPaid += $siswa->monthlyTotals[$month] ?? 0;
-                                    }
-                                    // Calculate remaining billing amount
-                                    $remainingAmount = ($siswa->siswa->billing_amount ?? 0) - $totalPaid;
-                                @endphp
+                            
 
                                 <!-- Display the monthly totals -->
                                 @foreach(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'] as $month)
@@ -289,7 +237,7 @@
                                 @endforeach
 
                                 <!-- New <td> for the billing amount minus the total amount paid -->
-                            <td>{{ number_format($remainingAmount, 0, ',', '.') }}</td>
+                            
                         </tr>
                         @empty
                         <tr>
@@ -314,12 +262,11 @@
                         <tr>
                             <th>No</th>
                             <th>Siswa</th>
-                            <th>Spp Bulanan</th>
-                            <th>SPP/TH</th>
+                         
                             @foreach(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'] as $month)
                                 <th>{{ $month }}</th>
                             @endforeach
-                            <th>Tunggakan</th>
+                      
                         </tr>
                     </thead>
                     <tbody>
@@ -327,18 +274,9 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $siswa->siswa->name ?? '' }}</td>
-                            <td>{{ $siswa->siswa->spp_tiap_bulan ?? '' }}</td>
-                            <td>{{ $siswa->siswa->billing_amount ?? '' }}</td>
+                        
     
-                                @php
-                                    // Calculate the total amount paid across all months
-                                    $totalPaid = 0;
-                                    foreach(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'] as $month) {
-                                        $totalPaid += $siswa->monthlyTotals[$month] ?? 0;
-                                    }
-                                    // Calculate remaining billing amount
-                                    $remainingAmount = ($siswa->siswa->billing_amount ?? 0) - $totalPaid;
-                                @endphp
+                            
 
                                 <!-- Display the monthly totals -->
                                 @foreach(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'] as $month)
@@ -346,7 +284,7 @@
                                 @endforeach
 
                                 <!-- New <td> for the billing amount minus the total amount paid -->
-                            <td>{{ number_format($remainingAmount, 0, ',', '.') }}</td>
+                            
                         </tr>
                         @empty
                         <tr>
