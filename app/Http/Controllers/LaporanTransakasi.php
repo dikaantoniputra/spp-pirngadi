@@ -611,7 +611,7 @@ class LaporanTransakasi extends Controller
         $kelas7 = $kelas7->map(function ($siswa) use ($monthMapping) {
             $monthlyTotals = array_fill_keys(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'], 0);
             foreach ($siswa->transaksi as $transaksi) {
-                if ($transaksi->keterangan === 'spp') { // Only process SPP transactions
+                if ($transaksi->keterangan === 'du') { // Only process SPP transactions
                     $englishMonth = $transaksi->created_at->format('M');
                     $month = $monthMapping[$englishMonth] ?? null;
                     if ($month && isset($monthlyTotals[$month])) {
@@ -626,7 +626,7 @@ class LaporanTransakasi extends Controller
         $kelas8 = $kelas8->map(function ($siswa) use ($monthMapping) {
             $monthlyTotals = array_fill_keys(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'], 0);
             foreach ($siswa->transaksi as $transaksi) {
-                if ($transaksi->keterangan === 'spp') { // Only process SPP transactions
+                if ($transaksi->keterangan === 'du') { // Only process SPP transactions
                     $englishMonth = $transaksi->created_at->format('M');
                     $month = $monthMapping[$englishMonth] ?? null;
                     if ($month && isset($monthlyTotals[$month])) {
@@ -641,7 +641,7 @@ class LaporanTransakasi extends Controller
         $kelas9 = $kelas9->map(function ($siswa) use ($monthMapping) {
             $monthlyTotals = array_fill_keys(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'], 0);
             foreach ($siswa->transaksi as $transaksi) {
-                if ($transaksi->keterangan === 'spp') { // Only process SPP transactions
+                if ($transaksi->keterangan === 'du') { // Only process SPP transactions
                     $englishMonth = $transaksi->created_at->format('M');
                     $month = $monthMapping[$englishMonth] ?? null;
                     if ($month && isset($monthlyTotals[$month])) {
@@ -690,7 +690,7 @@ class LaporanTransakasi extends Controller
         $kelas7 = $kelasA->map(function ($siswa) use ($monthMapping) {
             $monthlyTotals = array_fill_keys(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'], 0);
             foreach ($siswa->transaksi as $transaksi) {
-                if ($transaksi->keterangan === 'spp') { // Only process SPP transactions
+                if ($transaksi->keterangan === 'du') { // Only process SPP transactions
                     $englishMonth = $transaksi->created_at->format('M');
                     $month = $monthMapping[$englishMonth] ?? null;
                     if ($month && isset($monthlyTotals[$month])) {
@@ -705,7 +705,7 @@ class LaporanTransakasi extends Controller
         $kelas8 = $kelasB->map(function ($siswa) use ($monthMapping) {
             $monthlyTotals = array_fill_keys(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'], 0);
             foreach ($siswa->transaksi as $transaksi) {
-                if ($transaksi->keterangan === 'spp') { // Only process SPP transactions
+                if ($transaksi->keterangan === 'du') { // Only process SPP transactions
                     $englishMonth = $transaksi->created_at->format('M');
                     $month = $monthMapping[$englishMonth] ?? null;
                     if ($month && isset($monthlyTotals[$month])) {
@@ -720,7 +720,7 @@ class LaporanTransakasi extends Controller
         $kelas9 = $kelasKB->map(function ($siswa) use ($monthMapping) {
             $monthlyTotals = array_fill_keys(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'], 0);
             foreach ($siswa->transaksi as $transaksi) {
-                if ($transaksi->keterangan === 'spp') { // Only process SPP transactions
+                if ($transaksi->keterangan === 'du') { // Only process SPP transactions
                     $englishMonth = $transaksi->created_at->format('M');
                     $month = $monthMapping[$englishMonth] ?? null;
                     if ($month && isset($monthlyTotals[$month])) {
@@ -782,7 +782,7 @@ class LaporanTransakasi extends Controller
         $kelas1 = $kelas1->map(function ($siswa) use ($monthMapping) {
             $monthlyTotals = array_fill_keys(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'], 0);
             foreach ($siswa->transaksi as $transaksi) {
-                if ($transaksi->keterangan === 'spp') { // Only process SPP transactions
+                if ($transaksi->keterangan === 'du') { // Only process SPP transactions
                     $englishMonth = $transaksi->created_at->format('M');
                     $month = $monthMapping[$englishMonth] ?? null;
                     if ($month && isset($monthlyTotals[$month])) {
@@ -797,7 +797,7 @@ class LaporanTransakasi extends Controller
         $kelas2 = $kelas2->map(function ($siswa) use ($monthMapping) {
             $monthlyTotals = array_fill_keys(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'], 0);
             foreach ($siswa->transaksi as $transaksi) {
-                if ($transaksi->keterangan === 'spp') { // Only process SPP transactions
+                if ($transaksi->keterangan === 'du') { // Only process SPP transactions
                     $englishMonth = $transaksi->created_at->format('M');
                     $month = $monthMapping[$englishMonth] ?? null;
                     if ($month && isset($monthlyTotals[$month])) {
@@ -812,7 +812,7 @@ class LaporanTransakasi extends Controller
         $kelas3 = $kelas3->map(function ($siswa) use ($monthMapping) {
             $monthlyTotals = array_fill_keys(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'], 0);
             foreach ($siswa->transaksi as $transaksi) {
-                if ($transaksi->keterangan === 'spp') { // Only process SPP transactions
+                if ($transaksi->keterangan === 'du') { // Only process SPP transactions
                     $englishMonth = $transaksi->created_at->format('M');
                     $month = $monthMapping[$englishMonth] ?? null;
                     if ($month && isset($monthlyTotals[$month])) {
@@ -827,7 +827,7 @@ class LaporanTransakasi extends Controller
         $kelas4 = $kelas4->map(function ($siswa) use ($monthMapping) {
             $monthlyTotals = array_fill_keys(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'], 0);
             foreach ($siswa->transaksi as $transaksi) {
-                if ($transaksi->keterangan === 'spp') { // Only process SPP transactions
+                if ($transaksi->keterangan === 'du') { // Only process SPP transactions
                     $englishMonth = $transaksi->created_at->format('M');
                     $month = $monthMapping[$englishMonth] ?? null;
                     if ($month && isset($monthlyTotals[$month])) {
@@ -842,7 +842,7 @@ class LaporanTransakasi extends Controller
         $kelas5 = $kelas5->map(function ($siswa) use ($monthMapping) {
             $monthlyTotals = array_fill_keys(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'], 0);
             foreach ($siswa->transaksi as $transaksi) {
-                if ($transaksi->keterangan === 'spp') { // Only process SPP transactions
+                if ($transaksi->keterangan === 'du') { // Only process SPP transactions
                     $englishMonth = $transaksi->created_at->format('M');
                     $month = $monthMapping[$englishMonth] ?? null;
                     if ($month && isset($monthlyTotals[$month])) {
@@ -857,7 +857,7 @@ class LaporanTransakasi extends Controller
         $kelas6 = $kelas6->map(function ($siswa) use ($monthMapping) {
             $monthlyTotals = array_fill_keys(['Jul', 'Agst', 'Sep', 'Okt', 'Nov', 'Des', 'Jan', 'Peb', 'Mar', 'Apr', 'Mei', 'Jun'], 0);
             foreach ($siswa->transaksi as $transaksi) {
-                if ($transaksi->keterangan === 'spp') { // Only process SPP transactions
+                if ($transaksi->keterangan === 'du') { // Only process SPP transactions
                     $englishMonth = $transaksi->created_at->format('M');
                     $month = $monthMapping[$englishMonth] ?? null;
                     if ($month && isset($monthlyTotals[$month])) {
