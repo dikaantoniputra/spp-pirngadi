@@ -98,7 +98,7 @@
                 <label for="va_creation_date" class="col-4 col-form-label">Tgl-pembayaran<span class="text-danger"> *</span></label>
                 <div class="col-7">
                     <div class="input-group">
-                        <input id="va_creation_date" name="created_at" type="datetime-local"  class="form-control" value="{{ old('created_at', $transaksi->created_at ?? '') }}" />
+                        <input id="va_creation_date" name="created_at" type="datetime-local"  class="form-control" value="{{ old('created_at', $transaksi->created_at ?? '') }}" required />
                     </div>  
                 </div>
             </div>

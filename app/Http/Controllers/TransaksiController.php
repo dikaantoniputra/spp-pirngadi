@@ -62,9 +62,11 @@ class TransaksiController extends Controller
             $randomNumber = rand(1000, 9999); // Random number part of the slug
             $slug = $dateSlug . '-' . $randomNumber;
             $transaksi->invoince = $slug;
+
+            
     
             // Save the Transaksi to the database
-            $transaksi->created_at = now();
+            $transaksi->created_at = $request->input('created_at');
             
             $transaksi->save();
     
