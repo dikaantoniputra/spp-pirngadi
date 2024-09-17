@@ -19,10 +19,30 @@ class TuSmaController extends Controller
 
       // Menghitung jumlah siswa yang berada di kelas 10
       $countKelas10 = $siswa->where('kelas', 10)->count();
-      $countKelas11 = $siswa->where('kelas', 10)->count();
-      $countKelas12 = $siswa->where('kelas', 10)->count();
-        
-      return view('page.tu-sma.index', compact('siswa','countKelas10','countKelas11','countKelas12'));
+      $countKelas11 = $siswa->where('kelas', 11)->count();
+      $countKelas12 = $siswa->where('kelas', 12)->count();
+      $countsiswa = Siswa::where('jenjang', 'SMA')->count();
+
+      $siswaSMA = Siswa::where('jenjang', 'SMA')->pluck('id');
+
+      // Assuming $startDate and $endDate are coming from your form inputs
+        $startDate = request('start_date');
+        $endDate = request('end_date');
+
+        $transaksisma = Transaksi::whereIn('tagihan_id', function($query) use ($siswaSMA) {
+                $query->select('id')
+                    ->from('tagihans') 
+                    ->whereIn('siswa_id', $siswaSMA);
+            })
+            ->whereBetween('created_at', [$startDate, $endDate]) // Filter by date range
+            ->select('tagihan_id', 'created_at', 'nominal_bayar')
+            ->get();
+
+        $totalNominalBayar = $transaksisma->sum('nominal_bayar');
+
+
+
+      return view('page.tu-sma.index', compact('countsiswa','countKelas10','countKelas11','countKelas12','totalNominalBayar'));
 
     }
 

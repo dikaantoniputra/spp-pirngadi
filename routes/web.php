@@ -44,6 +44,12 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/laporan-smp', [LaporanTransakasi::class, 'smp'])->name('laporan-smp');
         Route::get('/laporan-sma', [LaporanTransakasi::class, 'sma'])->name('laporan-sma');
 
+      
+        Route::get('/tabel-sma-du', [LaporanTransakasi::class, 'smatabeldu'])->name('tabel-sma.du');
+        Route::get('/tabel-smp-du', [LaporanTransakasi::class, 'smptabeldu'])->name('tabel-smp.du');
+        Route::get('/tabel-tk-du', [LaporanTransakasi::class, 'tktabeldu'])->name('tabel-tk.du');
+        Route::get('/tabel-sd-du', [LaporanTransakasi::class, 'sdtabeldu'])->name('tabel-sd.du');
+        
         Route::get('/tabel-sma', [LaporanTransakasi::class, 'smatabel'])->name('tabel-sma');
         Route::get('/tabel-smp', [LaporanTransakasi::class, 'smptabel'])->name('tabel-smp');
         Route::get('/tabel-sd', [LaporanTransakasi::class, 'sdtabel'])->name('tabel-sd');

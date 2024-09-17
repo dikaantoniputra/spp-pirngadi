@@ -21,21 +21,21 @@
                             </a>
                         </li>
         
+                        
                         <li class="nav-item dropdown">
-                            <a class="nav-link arrow-none" id="topnav-dashboard" role="button"
-                            aria-haspopup="true" aria-expanded="false" href="{{ route('siswa.index') }}">
-                                <i class="mdi mdi-calendar-blank-outline"></i>
-                                <span> Manajemen Siswa </span>
+                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-layout" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="mdi mdi-card-bulleted-settings-outline me-1"></i> Manajemen Siswa<div class="arrow-down"></div>
                             </a>
+                            <div class="dropdown-menu" aria-labelledby="topnav-layout">
+                                
+                                <a href="{{ route('siswa.index') }}" class="dropdown-item">Data Siswa</a>
+                                <a href="{{ route('tagihan.index') }}" class="dropdown-item">Data Tagihan</a>
+                                <a href="#" class="dropdown-item">Data Tunggakan (pengembangan)</a>
+                            </div>
                         </li>
         
-                        <li class="nav-item dropdown">
-                            <a class="nav-link arrow-none" id="topnav-dashboard" role="button"
-                            aria-haspopup="true" aria-expanded="false" href="{{ route('tagihan.index') }}">
-                                <i class="mdi mdi-calendar-blank-outline"></i>
-                                <span> Tagihan Siswa </span>
-                            </a>
-                        </li>
+                      
         
                         <li class="nav-item dropdown">
                             <a class="nav-link arrow-none" id="topnav-dashboard" role="button"
@@ -46,30 +46,71 @@
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-layout" role="button"
+                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-components" role="button"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="mdi mdi-card-bulleted-settings-outline me-1"></i> Laporan Transaksi <div class="arrow-down"></div>
+                                <i class="mdi mdi-file-multiple-outline"></i> Laporan <div class="arrow-down"></div>
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="topnav-layout">
-                                <a href="{{ route('laporan-tk') }}" class="dropdown-item">Unit TK</a>
-                                <a href="{{ route('laporan-sd') }}" class="dropdown-item">Unit SD</a>
-                                <a href="{{ route('laporan-smp') }}" class="dropdown-item">Unit SMP</a>
-                                <a href="{{ route('laporan-sma') }}" class="dropdown-item">Unit SMA</a>
+                            <div class="dropdown-menu" aria-labelledby="topnav-components">
+                               
+                                <div class="dropdown">
+                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-extendedui"
+                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        TK <div class="arrow-down"></div>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="topnav-extendedui">
+                                        <a href="{{ route('laporan-tk') }}" class="dropdown-item">Transaksi TK</a>
+                                        <a href="{{ route('tabel-tk.du') }}" class="dropdown-item">Tabel Du TK</a>
+                                        <a href="{{ route('tabel-tk') }}" class="dropdown-item">Tabel Spp TK</a>
+                                        
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-form"
+                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        SD <div class="arrow-down"></div>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="topnav-form">
+                                        <a href="{{ route('laporan-sd') }}" class="dropdown-item">Transaksi SD</a>
+                                        <a href="{{ route('tabel-sd.du') }}" class="dropdown-item">Tabel Du SD</a>
+                                        <a href="{{ route('tabel-sd') }}" class="dropdown-item">Tabel Spp SD</a>
+                                       
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-charts"
+                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                       SMP <div class="arrow-down"></div>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="topnav-charts">
+                                        <a href="{{ route('laporan-smp') }}" class="dropdown-item">Transaksi SMP</a>
+                                        <a href="{{ route('tabel-smp.du') }}" class="dropdown-item">Tabel Du SMP</a>
+                                        <a href="{{ route('tabel-smp') }}" class="dropdown-item">Tabel Spp SMP</a>
+                                       
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-table"
+                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        SMA <div class="arrow-down"></div>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="topnav-table">
+                                        <a href="{{ route('laporan-sma') }}" class="dropdown-item">Transaksi SMA</a>
+                                        <a href="{{ route('tabel-sma.du') }}" class="dropdown-item">Tabel DU SMA</a> 
+                                        <a href="{{ route('tabel-sma') }}" class="dropdown-item">Tabel SPP SMA</a> 
+                                       
+                                    </div>
+                                </div>
+                            
                             </div>
                         </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-layout" role="button"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="mdi mdi-card-bulleted-settings-outline me-1"></i> Laporan Tahunan <div class="arrow-down"></div>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="topnav-layout">
-                                <a href="{{ route('tabel-tk') }}" class="dropdown-item">Unit TK</a>
-                                <a href="{{ route('tabel-sd') }}" class="dropdown-item">Unit SD</a>
-                                <a href="{{ route('tabel-smp') }}" class="dropdown-item">Unit SMP</a>
-                                <a href="{{ route('tabel-sma') }}" class="dropdown-item">Unit SMA</a> 
-                            </div>
-                        </li>
+                      
+
+                      
+
+                       
+
+                      
 
                     </ul> <!-- end navbar-->
                 @endif
