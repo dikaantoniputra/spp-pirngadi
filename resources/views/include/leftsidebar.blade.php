@@ -210,6 +210,52 @@
 
                 </ul> <!-- end navbar-->
                 @endif
+                @if (auth()->user()->role == 'kepala-unit-tk')
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link arrow-none" href="{{ route('tk.admin.dashboard') }}" id="topnav-dashboard" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-view-dashboard me-1"></i> Dashboard
+                        </a>
+            
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link arrow-none" id="topnav-dashboard" role="button"
+                        aria-haspopup="true" aria-expanded="false" href="{{ route('tk.siswa') }}">
+                            <i class="mdi mdi-calendar-blank-outline"></i>
+                            <span> Data Siswa </span>
+                        </a>
+                    </li>
+    
+              
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-layout" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-card-bulleted-settings-outline me-1"></i> Laporan Transaksi <div class="arrow-down"></div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="topnav-layout">
+                            <a href="{{ route('tk.kelas.A') }}" class="dropdown-item">Kelas A</a>
+                            <a href="{{ route('tk.kelas.B') }}" class="dropdown-item">Kelas B</a>
+                            <a href="{{ route('tk.kelas.KB') }}" class="dropdown-item">Kelas KB</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-components" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-file-multiple-outline"></i> Laporan <div class="arrow-down"></div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="topnav-components">
+                                <a href="{{ route('tk.laporan-tk') }}" class="dropdown-item">Transaksi TK</a>
+                                <a href="{{ route('tk.tabel-tk.du') }}" class="dropdown-item">Tabel DU TK</a> 
+                                <a href="{{ route('tk.tabel-tk') }}" class="dropdown-item">Tabel SPP TK</a> 
+                        </div>
+                    </li>
+
+                </ul> <!-- end navbar-->
+                @endif
             </div> <!-- end .collapsed-->
         </nav>
     </div> <!-- end container-fluid -->

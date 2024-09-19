@@ -11,6 +11,7 @@ use App\Http\Controllers\TuSmpController;
 use App\Http\Controllers\LaporanTransakasi;
 use App\Http\Controllers\TagihanController;
 use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\TuTkController;
 
 /*
 |--------------------------------------------------------------------------
@@ -85,6 +86,21 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/tabel-smp', [LaporanTransakasi::class, 'smptabel'])->name('tabel-smp');
         Route::get('/laporan-smp', [LaporanTransakasi::class, 'smp'])->name('laporan-smp');
         Route::get('/tabel-smp-du', [LaporanTransakasi::class, 'smptabeldu'])->name('tabel-smp.du');
+       
+    });
+
+    Route::group(['prefix' => 'kepala-unit-tk', 'middleware' => 'role:kepala-unit-tk', 'as'=>'tk.'], function () {
+
+        Route::get('/', [TuTkController::class, 'index'])->name('admin.dashboard');
+        Route::get('/siswa', [TuTkController::class, 'siswa'])->name('siswa');
+       
+        Route::get('/kelas-a', [TuTkController::class, 'kelasA'])->name('kelas.A');
+        Route::get('/kelas-b', [TuTkController::class, 'kelasB'])->name('kelas.B');
+        Route::get('/kelas-kb', [TuTkController::class, 'kelasKB'])->name('kelas.KB');
+
+        Route::get('/tabel-tk', [LaporanTransakasi::class, 'tktabel'])->name('tabel-tk');
+        Route::get('/laporan-tk', [LaporanTransakasi::class, 'tk'])->name('laporan-tk');
+        Route::get('/tabel-tk-du', [LaporanTransakasi::class, 'tktabeldu'])->name('tabel-tk.du');
        
     });
    

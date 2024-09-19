@@ -71,9 +71,7 @@ class TuSmpController extends Controller
          $siswa = Siswa::where('jenjang', 'smp')->get();
          return view('page.tu-smp.siswa', compact('siswa'));
      }
- 
-    
- 
+
      public function kelas7()
      {
          $transaksi = Transaksi::whereHas('tagihan.siswa', function ($query) {
@@ -85,7 +83,6 @@ class TuSmpController extends Controller
          return view('page.tu-smp.kelas7', compact('transaksi'));
      }
      
- 
      public function kelas8()
      {
          $transaksi = Transaksi::whereHas('tagihan.siswa', function ($query) {
