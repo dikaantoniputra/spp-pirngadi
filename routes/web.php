@@ -60,10 +60,15 @@ Route::group(['middleware' => ['auth']], function () {
 
         Route::get('/', [TuSmaController::class, 'index'])->name('admin.dashboard');
         Route::get('/siswa', [TuSmaController::class, 'siswa'])->name('siswa');
-        Route::get('/tabel-sma', [TuSmaController::class, 'smatabel'])->name('tabel-sma');
+       
         Route::get('/kelas-10', [TuSmaController::class, 'kelas10'])->name('kelas.10');
         Route::get('/kelas-11', [TuSmaController::class, 'kelas11'])->name('kelas.11');
         Route::get('/kelas-12', [TuSmaController::class, 'kelas12'])->name('kelas.12');
+
+
+        Route::get('/tabel-sma', [LaporanTransakasi::class, 'smatabel'])->name('tabel-sma');
+        Route::get('/laporan-sma', [LaporanTransakasi::class, 'sma'])->name('laporan-sma');
+        Route::get('/tabel-sma-du', [LaporanTransakasi::class, 'smatabeldu'])->name('tabel-sma.du');
        
     });
    

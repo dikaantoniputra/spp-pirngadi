@@ -40,9 +40,18 @@ class TuSmaController extends Controller
 
         $totalNominalBayar = $transaksisma->sum('nominal_bayar');
 
+        $transaksi = Transaksi::whereHas('tagihan.siswa', function($query) {
+            $query->where('jenjang', 'sma');
+        })
+        ->whereMonth('created_at', now()->month)
+        ->whereYear('created_at', now()->year)
+        ->with(['tagihan.siswa'])
+        ->get();
+    
 
 
-      return view('page.tu-sma.index', compact('countsiswa','countKelas10','countKelas11','countKelas12','totalNominalBayar'));
+
+      return view('page.tu-sma.index', compact('countsiswa','countKelas10','countKelas11','countKelas12','totalNominalBayar','transaksi'));
 
     }
 
@@ -131,16 +140,21 @@ class TuSmaController extends Controller
     {
         $transaksi = Transaksi::whereHas('tagihan.siswa', function ($query) {
             $query->where('kelas', '10');
-        })->get();
-
+        })
+        ->where('keterangan', 'spp')
+        ->get();
+    
         return view('page.tu-sma.kelas10', compact('transaksi'));
     }
+    
 
     public function kelas11()
     {
         $transaksi = Transaksi::whereHas('tagihan.siswa', function ($query) {
             $query->where('kelas', '11');
-        })->get();
+        })
+        ->where('keterangan', 'spp')
+        ->get();
 
         return view('page.tu-sma.kelas11', compact('transaksi'));
     }
@@ -149,7 +163,9 @@ class TuSmaController extends Controller
     {
         $transaksi = Transaksi::whereHas('tagihan.siswa', function ($query) {
             $query->where('kelas', '12');
-        })->get();
+        })
+        ->where('keterangan', 'spp')
+        ->get();
 
         return view('page.tu-sma.kelas12', compact('transaksi'));
     }

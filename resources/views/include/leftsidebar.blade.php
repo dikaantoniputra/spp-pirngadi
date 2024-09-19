@@ -147,11 +147,17 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link arrow-none" id="topnav-dashboard" role="button"
-                        aria-haspopup="true" aria-expanded="false" href="{{ route('sma.tabel-sma') }}">
-                        <i class="mdi mdi-card-bulleted-settings-outline me-1"></i>
-                            <span> Tabel Tagihan Siswa </span>
+                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-components" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-file-multiple-outline"></i> Laporan <div class="arrow-down"></div>
                         </a>
+                        <div class="dropdown-menu" aria-labelledby="topnav-components">
+ 
+                                    <a href="{{ route('sma.laporan-sma') }}" class="dropdown-item">Transaksi SMA</a>
+                                    <a href="{{ route('sma.tabel-sma.du') }}" class="dropdown-item">Tabel DU SMA</a> 
+                                    <a href="{{ route('sma.tabel-sma') }}" class="dropdown-item">Tabel SPP SMA</a> 
+
+                        </div>
                     </li>
 
                 </ul> <!-- end navbar-->
