@@ -161,7 +161,55 @@
                     </li>
 
                 </ul> <!-- end navbar-->
-            @endif
+                @endif
+                @if (auth()->user()->role == 'kepala-unit-smp')
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link arrow-none" href="{{ route('smp.admin.dashboard') }}" id="topnav-dashboard" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-view-dashboard me-1"></i> Dashboard
+                        </a>
+            
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link arrow-none" id="topnav-dashboard" role="button"
+                        aria-haspopup="true" aria-expanded="false" href="{{ route('smp.siswa') }}">
+                            <i class="mdi mdi-calendar-blank-outline"></i>
+                            <span> Data Siswa </span>
+                        </a>
+                    </li>
+    
+              
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-layout" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-card-bulleted-settings-outline me-1"></i> Laporan Transaksi <div class="arrow-down"></div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="topnav-layout">
+                            <a href="{{ route('smp.kelas.7') }}" class="dropdown-item">Kelas 7</a>
+                            <a href="{{ route('smp.kelas.8') }}" class="dropdown-item">Kelas 8</a>
+                            <a href="{{ route('smp.kelas.9') }}" class="dropdown-item">Kelas 9</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-components" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-file-multiple-outline"></i> Laporan <div class="arrow-down"></div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="topnav-components">
+ 
+                                    <a href="{{ route('smp.laporan-smp') }}" class="dropdown-item">Transaksi SMP</a>
+                                    <a href="{{ route('smp.tabel-smp.du') }}" class="dropdown-item">Tabel DU SMP</a> 
+                                    <a href="{{ route('smp.tabel-smp') }}" class="dropdown-item">Tabel SPP SMP</a> 
+
+                        </div>
+                    </li>
+
+                </ul> <!-- end navbar-->
+                @endif
             </div> <!-- end .collapsed-->
         </nav>
     </div> <!-- end container-fluid -->

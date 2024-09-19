@@ -43,6 +43,8 @@ class AuthController extends Controller
                     return redirect()->route('admin.dashboard');
                 } elseif ($role === 'kepala-unit-sma') {
                     return redirect()->route('sma.admin.dashboard');
+                } elseif ($role === 'kepala-unit-smp') {
+                    return redirect()->route('smp.admin.dashboard');
                 } else {
                     return redirect()->route('user.dashboard');
                 }

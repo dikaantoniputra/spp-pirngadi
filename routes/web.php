@@ -1,15 +1,16 @@
 <?php
 
+use App\Models\Tagihan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\LaporanTransakasi;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\TuSmaController;
+use App\Http\Controllers\TuSmpController;
+use App\Http\Controllers\LaporanTransakasi;
 use App\Http\Controllers\TagihanController;
 use App\Http\Controllers\TransaksiController;
-use App\Http\Controllers\TuSmaController;
-use App\Http\Controllers\UserController;
-use App\Models\Tagihan;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,6 +70,21 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/tabel-sma', [LaporanTransakasi::class, 'smatabel'])->name('tabel-sma');
         Route::get('/laporan-sma', [LaporanTransakasi::class, 'sma'])->name('laporan-sma');
         Route::get('/tabel-sma-du', [LaporanTransakasi::class, 'smatabeldu'])->name('tabel-sma.du');
+       
+    });
+
+    Route::group(['prefix' => 'kepala-unit-smp', 'middleware' => 'role:kepala-unit-smp', 'as'=>'smp.'], function () {
+
+        Route::get('/', [TuSmpController::class, 'index'])->name('admin.dashboard');
+        Route::get('/siswa', [TuSmpController::class, 'siswa'])->name('siswa');
+       
+        Route::get('/kelas-7', [TuSmpController::class, 'kelas7'])->name('kelas.7');
+        Route::get('/kelas-8', [TuSmpController::class, 'kelas8'])->name('kelas.8');
+        Route::get('/kelas-9', [TuSmpController::class, 'kelas9'])->name('kelas.9');
+
+        Route::get('/tabel-smp', [LaporanTransakasi::class, 'smptabel'])->name('tabel-smp');
+        Route::get('/laporan-smp', [LaporanTransakasi::class, 'smp'])->name('laporan-smp');
+        Route::get('/tabel-smp-du', [LaporanTransakasi::class, 'smptabeldu'])->name('tabel-smp.du');
        
     });
    
