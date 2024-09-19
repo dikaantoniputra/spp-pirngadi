@@ -7,21 +7,21 @@ use App\Models\Transaksi;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class TuTkController extends Controller
+class TuSdController extends Controller
 {
-    
+
     public function index()
     {
       // Assuming you have a column 'jenjang' in your 'Siswa' model to filter by SMA
       $siswa = Siswa::where('jenjang', 'TK')->get();
 
       // Menghitung jumlah siswa yang berada di kelas 10
-      $countKelas10 = $siswa->where('kelas', 'a')->count();
-      $countKelas11 = $siswa->where('kelas', 'b')->count();
-      $countKelas12 = $siswa->where('kelas', 'kb')->count();
+      $countKelas10 = $siswa->where('kelas', '1')->count();
+      $countKelas11 = $siswa->where('kelas', '2')->count();
+      $countKelas12 = $siswa->where('kelas', '3')->count();
       $countsiswa = Siswa::where('jenjang', 'TK')->count();
 
-      $siswaSMA = Siswa::where('jenjang', 'TK')->pluck('id');
+      $siswaSMA = Siswa::where('jenjang', 'SD')->pluck('id');
 
       // Assuming $startDate and $endDate are coming from your form inputs
       $startDate = request('start_date');
@@ -42,7 +42,7 @@ class TuTkController extends Controller
         // Additional processing if needed
 
         $transaksi = Transaksi::whereHas('tagihan.siswa', function($query) {
-            $query->where('jenjang', 'TK');
+            $query->where('jenjang', 'SD');
         })
         ->whereMonth('created_at', now()->month)
         ->whereYear('created_at', now()->year)
@@ -57,45 +57,78 @@ class TuTkController extends Controller
 
     }
 
-
     public function siswa()
     {
       // Assuming you have a column 'jenjang' in your 'Siswa' model to filter by SMA
-        $siswa = Siswa::where('jenjang', 'tk')->get();
-        return view('page.tu-tk.siswa', compact('siswa'));
+        $siswa = Siswa::where('jenjang', 'sd')->get();
+        return view('page.tu-sd.siswa', compact('siswa'));
     }
 
-    public function kelasA()
+    public function kelas1()
     {
         $transaksi = Transaksi::whereHas('tagihan.siswa', function ($query) {
-            $query->where('kelas', 'a');
+            $query->where('kelas', '1');
         })
         ->where('keterangan', 'spp')
         ->get();
     
-        return view('page.tu-tk.kelasA', compact('transaksi'));
+        return view('page.tu-sd.kelas1', compact('transaksi'));
     }
     
-    public function kelasB()
+    public function kelas2()
     {
         $transaksi = Transaksi::whereHas('tagihan.siswa', function ($query) {
-            $query->where('kelas', 'b');
+            $query->where('kelas', '2');
         })
         ->where('keterangan', 'spp')
         ->get();
 
-        return view('page.tu-tk.kelasB', compact('transaksi'));
+        return view('page.tu-sd.kelas2', compact('transaksi'));
     }
 
-    public function kelasKB()
+    public function kelas3()
     {
         $transaksi = Transaksi::whereHas('tagihan.siswa', function ($query) {
-            $query->where('kelas', 'kb');
+            $query->where('kelas', '3');
         })
         ->where('keterangan', 'spp')
         ->get();
 
-        return view('page.tu-tk.kelasKB', compact('transaksi'));
+        return view('page.tu-sd.kelas3', compact('transaksi'));
+    }
+
+    public function kelas4()
+    {
+        $transaksi = Transaksi::whereHas('tagihan.siswa', function ($query) {
+            $query->where('kelas', '4');
+        })
+        ->where('keterangan', 'spp')
+        ->get();
+    
+        return view('page.tu-sd.kelas4', compact('transaksi'));
     }
     
+    public function kelas5()
+    {
+        $transaksi = Transaksi::whereHas('tagihan.siswa', function ($query) {
+            $query->where('kelas', '5');
+        })
+        ->where('keterangan', 'spp')
+        ->get();
+
+        return view('page.tu-sd.kelas5', compact('transaksi'));
+    }
+
+    public function kelas6()
+    {
+        $transaksi = Transaksi::whereHas('tagihan.siswa', function ($query) {
+            $query->where('kelas', '6');
+        })
+        ->where('keterangan', 'spp')
+        ->get();
+
+        return view('page.tu-sd.kelas6', compact('transaksi'));
+    }
+
+
 }

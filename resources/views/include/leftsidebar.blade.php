@@ -210,6 +210,58 @@
 
                 </ul> <!-- end navbar-->
                 @endif
+                @if (auth()->user()->role == 'kepala-unit-sd')
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link arrow-none" href="{{ route('sd.admin.dashboard') }}" id="topnav-dashboard" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-view-dashboard me-1"></i> Dashboard
+                        </a>
+            
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link arrow-none" id="topnav-dashboard" role="button"
+                        aria-haspopup="true" aria-expanded="false" href="{{ route('sd.siswa') }}">
+                            <i class="mdi mdi-calendar-blank-outline"></i>
+                            <span> Data Siswa </span>
+                        </a>
+                    </li>
+    
+              
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-layout" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-card-bulleted-settings-outline me-1"></i> Laporan Transaksi <div class="arrow-down"></div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="topnav-layout">
+                            <a href="{{ route('sd.kelas.1') }}" class="dropdown-item">Kelas 1</a>
+                            <a href="{{ route('sd.kelas.2') }}" class="dropdown-item">Kelas 2</a>
+                            <a href="{{ route('sd.kelas.3') }}" class="dropdown-item">Kelas 3</a>
+                            <a href="{{ route('sd.kelas.4') }}" class="dropdown-item">Kelas 4</a>
+                            <a href="{{ route('sd.kelas.5') }}" class="dropdown-item">Kelas 5</a>
+                            <a href="{{ route('sd.kelas.6') }}" class="dropdown-item">Kelas 6</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-components" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-file-multiple-outline"></i> Laporan <div class="arrow-down"></div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="topnav-components">
+ 
+                                    <a href="{{ route('sd.laporan-sd') }}" class="dropdown-item">Transaksi SD</a>
+                                    <a href="{{ route('sd.tabel-sd.du') }}" class="dropdown-item">Tabel DU SD</a> 
+                                    <a href="{{ route('sd.tabel-sd') }}" class="dropdown-item">Tabel SPP SD</a> 
+
+                        </div>
+                    </li>
+
+                </ul> <!-- end navbar-->
+                @endif
+
                 @if (auth()->user()->role == 'kepala-unit-tk')
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
