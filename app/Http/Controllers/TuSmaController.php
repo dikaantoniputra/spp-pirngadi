@@ -50,11 +50,14 @@ class TuSmaController extends Controller
         ->whereYear('created_at', now()->year)
         ->with(['tagihan.siswa'])
         ->get();
+
+
+        $countTransaksi = $transaksi->count();
     
 
 
 
-      return view('page.tu-sma.index', compact('countsiswa','countKelas10','countKelas11','countKelas12','totalNominalBayar','transaksi'));
+      return view('page.tu-sma.index', compact('countsiswa','countKelas10','countKelas11','countKelas12','totalNominalBayar','transaksi','countTransaksi'));
 
     }
 
