@@ -26,7 +26,7 @@ class TuSmaController extends Controller
       $siswaSMA = Siswa::where('jenjang', 'SMA')->pluck('id');
 
       // Assuming $startDate and $endDate are coming from your form inputs
-        $startDate = request('start_date');
+      $startDate = request('start_date');
         $endDate = request('end_date');
 
         $transaksisma = Transaksi::whereIn('tagihan_id', function($query) use ($siswaSMA) {
@@ -35,10 +35,13 @@ class TuSmaController extends Controller
                     ->whereIn('siswa_id', $siswaSMA);
             })
             ->whereBetween('created_at', [$startDate, $endDate]) // Filter by date range
+            ->whereIn('keterangan', ['spp', 'lain-lain']) // Only process SPP and 'dll' transactions
             ->select('tagihan_id', 'created_at', 'nominal_bayar')
             ->get();
 
-        $totalNominalBayar = $transaksisma->sum('nominal_bayar');
+        $totalNominalBayar = $transaksisma->sum('nominal_bayar'); // Sum only 'spp' transactions
+
+        // Additional processing if needed
 
         $transaksi = Transaksi::whereHas('tagihan.siswa', function($query) {
             $query->where('jenjang', 'sma');
