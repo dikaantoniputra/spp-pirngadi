@@ -25,7 +25,7 @@ class TransaksiController extends Controller
 
     public function index()
     {
-        $transaksi = Transaksi::all();
+        $transaksi = Transaksi::orderBy('id')->get();
         return view('page.transaksi.index', compact('transaksi'));
     }
 
