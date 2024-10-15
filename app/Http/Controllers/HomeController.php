@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Siswa;
 use App\Models\Transaksi;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Routing\Controller;
 
 class HomeController extends Controller
@@ -16,33 +17,82 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // Mendapatkan tanggal 28 bulan lalu
-        $startDate = now()->subMonth()->startOfMonth()->addDays(27);
-        
-        // Mendapatkan tanggal 28 bulan ini
-        $endDate = now()->startOfMonth()->addDays(27);
-    
-        // Ambil semua transaksi dalam rentang tanggal yang ditentukan
-        $transaksi = Transaksi::whereBetween('created_at', [$startDate, $endDate])->get();
-        
-        // Hitung total nominal_bayar dalam rentang waktu tersebut
-        $totalNominalBayar = $transaksi->sum('nominal_bayar');
+       
+        $countsiswaSma = Siswa::where('jenjang', 'SMA')->count();
+        $countsiswaSmp = Siswa::where('jenjang', 'SMP')->count();
+        $countsiswaSd = Siswa::where('jenjang', 'SD')->count();
+        $countsiswaTk = Siswa::where('jenjang', 'TK')->count();
+
+        $startDate = Carbon::now()->startOfMonth();  // First day of the current month
+        $endDate = Carbon::now()->endOfMonth();      // Last day of the current month
 
         $siswaSMA = Siswa::where('jenjang', 'SMA')->pluck('id');
+        $transaksisma = Transaksi::whereIn('tagihan_id', function($query) use ($siswaSMA) {
+                $query->select('id')
+                    ->from('tagihans') 
+                    ->whereIn('siswa_id', $siswaSMA);
+            })
+            ->whereBetween('created_at', [$startDate, $endDate]) // Filter by date range
+            ->whereIn('keterangan', ['spp', 'lain-lain']) // Only process SPP and 'dll' transactions
+            ->select('tagihan_id', 'created_at', 'nominal_bayar')
+            ->get();
 
-        // Ambil semua transaksi dalam rentang tanggal yang ditentukan dan sesuai dengan siswa SMA
-        $transaksisma = Transaksi::whereBetween('created_at', [$startDate, $endDate])
-                            ->whereIn('tagihan_id', function($query) use ($siswaSMA) {
-                                $query->select('id')
-                                        ->from('tagihans') // Pastikan ini adalah nama tabel yang benar
-                                        ->whereIn('siswa_id', $siswaSMA);
-                            })->get();
+        $totalNominalBayarSMA = $transaksisma->sum('nominal_bayar'); // Sum the nominal_bayar field
 
-        // Hitung total nominal_bayar dalam rentang waktu tersebut
-        $totalNominalBayarSMA = $transaksisma->sum('nominal_bayar');
-        
+
+        $siswaSMP = Siswa::where('jenjang', 'SMP')->pluck('id');
+        $transaksismp = Transaksi::whereIn('tagihan_id', function($query) use ($siswaSMP) {
+                $query->select('id')
+                    ->from('tagihans') 
+                    ->whereIn('siswa_id', $siswaSMP);
+            })
+            ->whereBetween('created_at', [$startDate, $endDate]) // Filter by date range
+            ->whereIn('keterangan', ['spp', 'lain-lain']) // Only process SPP and 'dll' transactions
+            ->select('tagihan_id', 'created_at', 'nominal_bayar')
+            ->get();
+
+        $totalNominalBayarSMP = $transaksismp->sum('nominal_bayar'); // Sum the nominal_bayar field
+
+        $siswaSD = Siswa::where('jenjang', 'SD')->pluck('id');
+        $transaksisd = Transaksi::whereIn('tagihan_id', function($query) use ($siswaSD) {
+                $query->select('id')
+                    ->from('tagihans') 
+                    ->whereIn('siswa_id', $siswaSD);
+            })
+            ->whereBetween('created_at', [$startDate, $endDate]) // Filter by date range
+            ->whereIn('keterangan', ['spp', 'lain-lain']) // Only process SPP and 'dll' transactions
+            ->select('tagihan_id', 'created_at', 'nominal_bayar')
+            ->get();
+
+        $totalNominalBayarSD = $transaksisd->sum('nominal_bayar'); // Sum the nominal_bayar field
+
+        $siswaTK = Siswa::where('jenjang', 'TK')->pluck('id');
+        $transaksisd = Transaksi::whereIn('tagihan_id', function($query) use ($siswaTK) {
+                $query->select('id')
+                    ->from('tagihans') 
+                    ->whereIn('siswa_id', $siswaTK);
+            })
+            ->whereBetween('created_at', [$startDate, $endDate]) // Filter by date range
+            ->whereIn('keterangan', ['spp', 'lain-lain']) // Only process SPP and 'dll' transactions
+            ->select('tagihan_id', 'created_at', 'nominal_bayar')
+            ->get();
+
+            $totalNominalBayarTK = $transaksisd->sum('nominal_bayar'); // Sum the nominal_bayar field
+
+            $transaksi = Transaksi::whereHas('tagihan.siswa', function($query) {
+                $query->whereIn('jenjang', ['sma', 'smp', 'sd', 'tk']); // Use whereIn for multiple values
+            })
+            ->whereMonth('created_at', now()->month)
+            ->whereYear('created_at', now()->year)
+            ->with(['tagihan.siswa'])
+            ->get();
+            
+
+
+        $countTransaksi = $transaksi->count();
+
         // Kirimkan hasil ke view atau lakukan hal lain
-        return view('page.index', compact('totalNominalBayar','totalNominalBayarSMA'));
+        return view('page.index', compact('countsiswaSma','countsiswaSmp','countsiswaSd','countsiswaTk','totalNominalBayarSMA','totalNominalBayarSMP','totalNominalBayarSD','totalNominalBayarTK','countTransaksi','transaksi'));
     }
     
 
