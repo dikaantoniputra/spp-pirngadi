@@ -114,6 +114,86 @@
 
                     </ul> <!-- end navbar-->
                 @endif
+                @if (auth()->user()->role == 'yayasan')
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link arrow-none" href="{{ route('yayasan.admin.dashboard') }}" id="topnav-dashboard" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-view-dashboard me-1"></i> Dashboard
+                        </a>
+            
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link arrow-none" id="topnav-dashboard" role="button"
+                        aria-haspopup="true" aria-expanded="false" href="{{ route('yayasan.siswa.index') }}">
+                            <i class="mdi mdi-calendar-blank-outline"></i>
+                            <span> Manajemen Siswa </span>
+                        </a>
+                    </li>
+    
+    
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-components" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-file-multiple-outline"></i> Laporan <div class="arrow-down"></div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="topnav-components">
+                           
+                            <div class="dropdown">
+                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-extendedui"
+                                    role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    TK <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-extendedui">
+                                    <a href="{{ route('yayasan.laporan-tk') }}" class="dropdown-item">Transaksi TK</a>
+                                    <a href="{{ route('yayasan.tabel-tk.du') }}" class="dropdown-item">Tabel Du TK</a>
+                                    <a href="{{ route('yayasan.tabel-tk') }}" class="dropdown-item">Tabel Spp TK</a>
+                                    
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-form"
+                                    role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    SD <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-form">
+                                    <a href="{{ route('yayasan.laporan-sd') }}" class="dropdown-item">Transaksi SD</a>
+                                    <a href="{{ route('yayasan.tabel-sd.du') }}" class="dropdown-item">Tabel Du SD</a>
+                                    <a href="{{ route('yayasan.tabel-sd') }}" class="dropdown-item">Tabel Spp SD</a>
+                                   
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-charts"
+                                    role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   SMP <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-charts">
+                                    <a href="{{ route('yayasan.laporan-smp') }}" class="dropdown-item">Transaksi SMP</a>
+                                    <a href="{{ route('yayasan.tabel-smp.du') }}" class="dropdown-item">Tabel Du SMP</a>
+                                    <a href="{{ route('yayasan.tabel-smp') }}" class="dropdown-item">Tabel Spp SMP</a>
+                                   
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-table"
+                                    role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    SMA <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-table">
+                                    <a href="{{ route('yayasan.laporan-sma') }}" class="dropdown-item">Transaksi SMA</a>
+                                    <a href="{{ route('yayasan.tabel-sma.du') }}" class="dropdown-item">Tabel DU SMA</a> 
+                                    <a href="{{ route('yayasan.tabel-sma') }}" class="dropdown-item">Tabel SPP SMA</a> 
+                                   
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </li>
+                    </ul> <!-- end navbar-->
+                 @endif
                 @if (auth()->user()->role == 'kepala-unit-sma')
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">

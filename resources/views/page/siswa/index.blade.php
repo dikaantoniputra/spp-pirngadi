@@ -18,10 +18,12 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
+                @if (auth()->user()->role == 'admin')
                 <h4 class="mt-0 header-title">Tambah Siswa</h4>
                 <a type="submit" href="{{ route('siswa.create') }}"
                         class="btn btn-primary waves-effect waves-light mb-4">Tambah
                         Siswa</a>
+                @endif
 
                 <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap">
                     <thead>
@@ -33,7 +35,9 @@
                         <th>jenjang</th>
                         <th>kelas</th>
                         <th>status</th>
+                        @if (auth()->user()->role == 'admin')
                         <th>action</th>
+                        @endif
                     </tr>
                     </thead>
 
@@ -49,6 +53,7 @@
                         <td>{{ $siswa->jenjang }}</td>
                         <td>{{ $siswa->kelas }}</td>
                         <td>{{ $siswa->status }}</td>
+                        @if (auth()->user()->role == 'admin')
                         <td>
                             <div class="btn-group mb-2">
                                 <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -69,6 +74,7 @@
                                 </div>
                             </div><!-- /btn-group -->
                         </td>
+                        @endif
                         
                        
                     </tr>

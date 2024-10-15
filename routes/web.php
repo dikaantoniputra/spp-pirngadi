@@ -60,6 +60,29 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/tabel-tk', [LaporanTransakasi::class, 'tktabel'])->name('tabel-tk');
     });
 
+    Route::group(['prefix' => 'yayasan', 'middleware' => 'role:yayasan', 'as'=>'yayasan.'], function () {
+
+        Route::get('/', [HomeController::class, 'index'])->name('admin.dashboard');
+
+        Route::resource('siswa', SiswaController::class);       
+        Route::resource('transaksi', TransaksiController::class);
+        Route::get('/laporan-tk', [LaporanTransakasi::class, 'index'])->name('laporan-tk');
+        Route::get('/laporan-sd', [LaporanTransakasi::class, 'sd'])->name('laporan-sd');
+        Route::get('/laporan-smp', [LaporanTransakasi::class, 'smp'])->name('laporan-smp');
+        Route::get('/laporan-sma', [LaporanTransakasi::class, 'sma'])->name('laporan-sma');
+
+        Route::get('/tabel-sma-du', [LaporanTransakasi::class, 'smatabeldu'])->name('tabel-sma.du');
+        Route::get('/tabel-smp-du', [LaporanTransakasi::class, 'smptabeldu'])->name('tabel-smp.du');
+        Route::get('/tabel-tk-du', [LaporanTransakasi::class, 'tktabeldu'])->name('tabel-tk.du');
+        Route::get('/tabel-sd-du', [LaporanTransakasi::class, 'sdtabeldu'])->name('tabel-sd.du');
+        
+        Route::get('/tabel-sma', [LaporanTransakasi::class, 'smatabel'])->name('tabel-sma');
+        Route::get('/tabel-smp', [LaporanTransakasi::class, 'smptabel'])->name('tabel-smp');
+        Route::get('/tabel-sd', [LaporanTransakasi::class, 'sdtabel'])->name('tabel-sd');
+        Route::get('/tabel-tk', [LaporanTransakasi::class, 'tktabel'])->name('tabel-tk');
+    });
+
+
     Route::group(['prefix' => 'kepala-unit-sma', 'middleware' => 'role:kepala-unit-sma', 'as'=>'sma.'], function () {
 
         Route::get('/', [TuSmaController::class, 'index'])->name('admin.dashboard');
