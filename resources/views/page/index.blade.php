@@ -1,5 +1,12 @@
 @extends('layout.master')
 
+@push('after-style')
+<link href="{{ asset('') }}assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+<link href="{{ asset('') }}assets/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+<link href="{{ asset('') }}assets/libs/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+<link href="{{ asset('') }}assets/libs/datatables.net-select-bs5/css//select.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+@endpush
+
 @section('content')
 
 <div class="row">
@@ -243,24 +250,8 @@
 @endsection
 
 @push('after-script')
-<script>
-    // Fungsi untuk mendapatkan nama bulan saat ini
-    const months = [
-        'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 
-        'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
-    ];
 
-    const currentMonth = new Date().getMonth();
-    document.getElementById('currentMonth').textContent = 'Pada bulan ' + months[currentMonth];
-</script>
 
-<script src="{{ asset('') }}assets/libs/jquery/jquery.min.js"></script>
-<script src="{{ asset('') }}assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="{{ asset('') }}assets/libs/simplebar/simplebar.min.js"></script>
-<script src="{{ asset('') }}assets/libs/node-waves/waves.min.js"></script>
-<script src="{{ asset('') }}assets/libs/waypoints/lib/jquery.waypoints.min.js"></script>
-<script src="{{ asset('') }}assets/libs/jquery.counterup/jquery.counterup.min.js"></script>
-<script src="{{ asset('') }}assets/libs/feather-icons/feather.min.js"></script>
 
 <script src="{{ asset('') }}assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="{{ asset('') }}assets/libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
@@ -275,6 +266,19 @@
 <script src="{{ asset('') }}assets/libs/datatables.net-select/js/dataTables.select.min.js"></script>
 <script src="{{ asset('') }}assets/libs/pdfmake/build/pdfmake.min.js"></script>
 <script src="{{ asset('') }}assets/libs/pdfmake/build/vfs_fonts.js"></script>
+
+<script>
+    // Fungsi untuk mendapatkan nama bulan saat ini
+    const months = [
+        'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 
+        'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
+    ];
+
+    const currentMonth = new Date().getMonth();
+    document.getElementById('currentMonth').textContent = 'Pada bulan ' + months[currentMonth];
+</script>
+
+
 <!-- third party js ends -->
 <script>
     $(document).ready(function() {

@@ -1,15 +1,10 @@
 @extends('layout.master')
 
 @push('after-style')
-
-<link rel="shortcut icon" href="{{ asset('') }}assets/images/favicon.ico">
-
-<!-- App css -->
-
-<link href="{{ asset('') }}assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-style" />
-
-<!-- icons -->
-<link href="{{ asset('') }}assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+<link href="{{ asset('') }}assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+<link href="{{ asset('') }}assets/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+<link href="{{ asset('') }}assets/libs/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+<link href="{{ asset('') }}assets/libs/datatables.net-select-bs5/css//select.bootstrap5.min.css" rel="stylesheet" type="text/css" />
 
 
 @endpush
@@ -267,25 +262,7 @@
 @push('after-script')
 
 
-        <script src="{{ asset('') }}assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="{{ asset('') }}assets/libs/simplebar/simplebar.min.js"></script>
-        <script src="{{ asset('') }}assets/libs/node-waves/waves.min.js"></script>
-        <script src="{{ asset('') }}assets/libs/waypoints/lib/jquery.waypoints.min.js"></script>
-        <script src="{{ asset('') }}assets/libs/jquery.counterup/jquery.counterup.min.js"></script>
-        <script src="{{ asset('') }}assets/libs/feather-icons/feather.min.js"></script>
 
-        <!-- knob plugin -->
-        <script src="{{ asset('') }}assets/libs/jquery-knob/jquery.knob.min.js"></script>
-
-        <!--Morris Chart-->
-        <script src="{{ asset('') }}assets/libs/morris.js06/morris.min.js"></script>
-        <script src="{{ asset('') }}assets/libs/raphael/raphael.min.js"></script>
-  
-        <!-- Dashboar init js-->
-        <script src="{{ asset('') }}assets/js/pages/dashboard.init.js"></script>
-
-        <!-- App js-->
-        <script src="{{ asset('') }}assets/js/app.min.js"></script>
 
         {{-- start js count siswa --}}
         <script>
@@ -327,6 +304,8 @@
 <script src="{{ asset('') }}assets/libs/datatables.net-select/js/dataTables.select.min.js"></script>
 <script src="{{ asset('') }}assets/libs/pdfmake/build/pdfmake.min.js"></script>
 <script src="{{ asset('') }}assets/libs/pdfmake/build/vfs_fonts.js"></script>
+
+
 <!-- third party js ends -->
 <script>
     $(document).ready(function() {
