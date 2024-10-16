@@ -13,13 +13,13 @@ class TuSdController extends Controller
     public function index()
     {
       // Assuming you have a column 'jenjang' in your 'Siswa' model to filter by SMA
-      $siswa = Siswa::where('jenjang', 'TK')->get();
+      $siswa = Siswa::where('jenjang', 'SD')->get();
 
       // Menghitung jumlah siswa yang berada di kelas 10
       $countKelas10 = $siswa->where('kelas', '1')->count();
       $countKelas11 = $siswa->where('kelas', '2')->count();
       $countKelas12 = $siswa->where('kelas', '3')->count();
-      $countsiswa = Siswa::where('jenjang', 'TK')->count();
+      $countsiswa = Siswa::where('jenjang', 'SD')->count();
 
       $siswaSMA = Siswa::where('jenjang', 'SD')->pluck('id');
 
@@ -53,7 +53,7 @@ class TuSdController extends Controller
         $countTransaksi = $transaksi->count();
     
 
-      return view('page.tu-tk.index', compact('countsiswa','countKelas10','countKelas11','countKelas12','totalNominalBayar','transaksi','countTransaksi'));
+      return view('page.tu-sd.index', compact('countsiswa','countKelas10','countKelas11','countKelas12','totalNominalBayar','transaksi','countTransaksi'));
 
     }
 

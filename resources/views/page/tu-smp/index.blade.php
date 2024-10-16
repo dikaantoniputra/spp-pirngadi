@@ -83,7 +83,7 @@
     <div class="col-xl-7 col-md-6">
         <div class="card">
             <div class="card-body">
-                <form method="GET" action="{{ route('sma.admin.dashboard') }}">
+                <form method="GET" action="{{ route('smp.admin.dashboard') }}">
                     <div class="row ">
                         <div class="col-md-2"><P>Start - End</P></div>
                         <div class="col-md-4">
