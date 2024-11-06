@@ -57,7 +57,8 @@
                         <option selected>Keterangan Pembayaran</option>
                         <option value="spp" {{ isset($transaksi) && $transaksi->keterangan == 'spp' ? 'selected' : '' }}>SPP</option>
                         <option value="du" {{ isset($transaksi) && $transaksi->keterangan == 'du' ? 'selected' : '' }}>DU</option>
-                        <option value="lain-lain" {{ isset($transaksi) && $transaksi->keterangan == 'lain-lain' ? 'selected' : '' }}>LAIN-LAIN</option>
+                        <option value="mutasi" {{ isset($transaksi) && $transaksi->keterangan == 'mutasi' ? 'selected' : '' }}>Mutasi</option>
+                        <option value="lain-lain" {{ isset($transaksi) && $transaksi->keterangan == 'lain-lain' ? 'selected' : '' }}>Tunggakan</option>
                         
                     </select>
                 </div>
