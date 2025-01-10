@@ -19,10 +19,11 @@ class TuSmaController extends Controller
         $siswa = Siswa::where('jenjang', 'SMA')->get();
 
         // Menghitung jumlah siswa yang berada di kelas 10
-        $countKelas10 = $siswa->where('kelas', 10)->count();
-        $countKelas11 = $siswa->where('kelas', 11)->count();
-        $countKelas12 = $siswa->where('kelas', 12)->count();
-        $countsiswa = Siswa::where('jenjang', 'SMA')->count();
+        $countKelas10 = $siswa->where('kelas', 10)->where('status', 'Active')->count();
+        $countKelas11 = $siswa->where('kelas', 11)->where('status', 'Active')->count();
+        $countKelas12 = $siswa->where('kelas', 12)->where('status', 'Active')->count();
+        $countsiswa = Siswa::where('jenjang', 'SMA')->where('status', 'Active')->count();
+
 
         $siswaSMA = Siswa::where('jenjang', 'SMA')->pluck('id');
 
@@ -107,7 +108,7 @@ class TuSmaController extends Controller
         $countTransaksimutasi = $transaksimutasi->count();
 
 
-        return view('page.tu-sma.index', compact('countTransaksimutasi','countTransaksidu', 'countTransaksispp', 'totalNominalBayarSMA', 'countsiswa', 'countKelas10', 'countKelas11', 'countKelas12', 'totalNominalBayar', 'transaksi', 'countTransaksi'));
+        return view('page.tu-sma.index', compact('countTransaksimutasi', 'countTransaksidu', 'countTransaksispp', 'totalNominalBayarSMA', 'countsiswa', 'countKelas10', 'countKelas11', 'countKelas12', 'totalNominalBayar', 'transaksi', 'countTransaksi'));
     }
 
 
