@@ -117,7 +117,11 @@
                         </thead>
                         <tbody>
                             @forelse ($kelas2 as $siswa)
-                                <tr>
+                                @php
+                                    $isNonActive = ($siswa->siswa->status ?? '') === 'Non Active'; // Check status
+                                    $rowClass = $isNonActive ? 'table-danger' : ''; // Apply CSS class for red color
+                                @endphp
+                                <tr class="{{ $rowClass }}">
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $siswa->siswa->name ?? '' }}</td>
                                     <td>{{ $siswa->siswa->spp_tiap_bulan ?? '' }}</td>
@@ -191,7 +195,11 @@
                         </thead>
                         <tbody>
                             @forelse ($kelas3 as $siswa)
-                                <tr>
+                            @php
+                            $isNonActive = ($siswa->siswa->status ?? '') === 'Non Active'; // Check status
+                            $rowClass = $isNonActive ? 'table-danger' : ''; // Apply CSS class for red color
+                        @endphp
+                        <tr class="{{ $rowClass }}">
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $siswa->siswa->name ?? '' }}</td>
                                     <td>{{ $siswa->siswa->spp_tiap_bulan ?? '' }}</td>
@@ -264,7 +272,11 @@
                         </thead>
                         <tbody>
                             @forelse ($kelas4 as $siswa)
-                                <tr>
+                            @php
+                            $isNonActive = ($siswa->siswa->status ?? '') === 'Non Active'; // Check status
+                            $rowClass = $isNonActive ? 'table-danger' : ''; // Apply CSS class for red color
+                        @endphp
+                        <tr class="{{ $rowClass }}">
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $siswa->siswa->name ?? '' }}</td>
                                     <td>{{ $siswa->siswa->spp_tiap_bulan ?? '' }}</td>
@@ -337,7 +349,11 @@
                         </thead>
                         <tbody>
                             @forelse ($kelas5 as $siswa)
-                                <tr>
+                            @php
+                            $isNonActive = ($siswa->siswa->status ?? '') === 'Non Active'; // Check status
+                            $rowClass = $isNonActive ? 'table-danger' : ''; // Apply CSS class for red color
+                        @endphp
+                        <tr class="{{ $rowClass }}">
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $siswa->siswa->name ?? '' }}</td>
                                     <td>{{ $siswa->siswa->spp_tiap_bulan ?? '' }}</td>
@@ -410,7 +426,11 @@
                         </thead>
                         <tbody>
                             @forelse ($kelas6 as $siswa)
-                                <tr>
+                            @php
+                            $isNonActive = ($siswa->siswa->status ?? '') === 'Non Active'; // Check status
+                            $rowClass = $isNonActive ? 'table-danger' : ''; // Apply CSS class for red color
+                        @endphp
+                        <tr class="{{ $rowClass }}">
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $siswa->siswa->name ?? '' }}</td>
                                     <td>{{ $siswa->siswa->spp_tiap_bulan ?? '' }}</td>
