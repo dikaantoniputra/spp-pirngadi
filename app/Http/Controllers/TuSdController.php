@@ -20,7 +20,7 @@ class TuSdController extends Controller
         $countKelas10 = $siswa->where('kelas', '1')->count();
         $countKelas11 = $siswa->where('kelas', '2')->count();
         $countKelas12 = $siswa->where('kelas', '3')->count();
-        $countsiswa = Siswa::where('jenjang', 'SD')->count();
+        $countsiswa = Siswa::where('jenjang', 'SD')->where('status', 'Active')->count();
 
         $siswaSMA = Siswa::where('jenjang', 'SD')->pluck('id');
 
