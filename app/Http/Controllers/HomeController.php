@@ -17,11 +17,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-       
-        $countsiswaSma = Siswa::where('jenjang', 'SMA')->count();
-        $countsiswaSmp = Siswa::where('jenjang', 'SMP')->count();
-        $countsiswaSd = Siswa::where('jenjang', 'SD')->count();
-        $countsiswaTk = Siswa::where('jenjang', 'TK')->count();
+
+        $countsiswaSma = Siswa::where('jenjang', 'SMA')->where('status', 0)->count();
+        $countsiswaSmp = Siswa::where('jenjang', 'SMP')->where('status', 0)->count();
+        $countsiswaSd  = Siswa::where('jenjang', 'SD')->where('status', 0)->count();
+        $countsiswaTk  = Siswa::where('jenjang', 'TK')->where('status', 0)->count();
+
 
         $startDate = Carbon::now()->startOfMonth();  // First day of the current month
         $endDate = Carbon::now()->endOfMonth();      // Last day of the current month
@@ -29,7 +30,7 @@ class HomeController extends Controller
         $siswaSMA = Siswa::where('jenjang', 'SMA')->pluck('id');
         $transaksisma = Transaksi::whereIn('tagihan_id', function($query) use ($siswaSMA) {
                 $query->select('id')
-                    ->from('tagihans') 
+                    ->from('tagihans')
                     ->whereIn('siswa_id', $siswaSMA);
             })
             ->whereBetween('created_at', [$startDate, $endDate]) // Filter by date range
@@ -43,7 +44,7 @@ class HomeController extends Controller
         $siswaSMP = Siswa::where('jenjang', 'SMP')->pluck('id');
         $transaksismp = Transaksi::whereIn('tagihan_id', function($query) use ($siswaSMP) {
                 $query->select('id')
-                    ->from('tagihans') 
+                    ->from('tagihans')
                     ->whereIn('siswa_id', $siswaSMP);
             })
             ->whereBetween('created_at', [$startDate, $endDate]) // Filter by date range
@@ -56,7 +57,7 @@ class HomeController extends Controller
         $siswaSD = Siswa::where('jenjang', 'SD')->pluck('id');
         $transaksisd = Transaksi::whereIn('tagihan_id', function($query) use ($siswaSD) {
                 $query->select('id')
-                    ->from('tagihans') 
+                    ->from('tagihans')
                     ->whereIn('siswa_id', $siswaSD);
             })
             ->whereBetween('created_at', [$startDate, $endDate]) // Filter by date range
@@ -69,7 +70,7 @@ class HomeController extends Controller
         $siswaTK = Siswa::where('jenjang', 'TK')->pluck('id');
         $transaksisd = Transaksi::whereIn('tagihan_id', function($query) use ($siswaTK) {
                 $query->select('id')
-                    ->from('tagihans') 
+                    ->from('tagihans')
                     ->whereIn('siswa_id', $siswaTK);
             })
             ->whereBetween('created_at', [$startDate, $endDate]) // Filter by date range
@@ -86,7 +87,7 @@ class HomeController extends Controller
             ->whereYear('created_at', now()->year)
             ->with(['tagihan.siswa'])
             ->get();
-            
+
 
 
         $countTransaksi = $transaksi->count();
@@ -94,7 +95,7 @@ class HomeController extends Controller
         // Kirimkan hasil ke view atau lakukan hal lain
         return view('page.index', compact('countsiswaSma','countsiswaSmp','countsiswaSd','countsiswaTk','totalNominalBayarSMA','totalNominalBayarSMP','totalNominalBayarSD','totalNominalBayarTK','countTransaksi','transaksi'));
     }
-    
+
 
     /**
      * Show the form for creating a new resource.
