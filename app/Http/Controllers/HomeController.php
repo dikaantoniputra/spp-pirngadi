@@ -20,7 +20,7 @@ class HomeController extends Controller
 
         $countsiswaSma = Siswa::where('jenjang', 'SMA')->where('status', 0)->count();
         $countsiswaSmp = Siswa::where('jenjang', 'SMP')->where('status', 0)->count();
-        $countsiswaSd  = Siswa::where('jenjang', 'SD')->where('status', 0)->count();
+        $countsiswaSd  = Siswa::where('jenjang', 'SD')->where('status', 'Active')->count();
         $countsiswaTk  = Siswa::where('jenjang', 'TK')->where('status', 0)->count();
 
 
